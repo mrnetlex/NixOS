@@ -176,8 +176,7 @@
     spotify
     obsidian
     vscodium
-    discord
-    vencord
+    discord-canary
     caprine-bin
     nextcloud-client
     easyeffects
