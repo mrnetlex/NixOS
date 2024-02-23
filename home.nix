@@ -12,6 +12,7 @@
     ./modules/home/mpv.nix
     ./modules/home/bat.nix
     ./modules/home/default_mime.nix
+    ./modules/home/micro.nix
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -76,19 +77,6 @@
     };
   };
   home.file.".config/yazi/init.lua".source = ./dotfiles/yazi/init.lua;
-  #Micro
-  programs.micro = {
-    enable = true;
-    settings = {
-      colorscheme = "simple";
-      autosu = true;
-      mkparents = true;
-      scrollbar = true;
-      savecursor = true;
-      clipboard = "terminal";
-      hlsearch = true;
-    };
-  };
   #Git
   programs.git = {
     enable = true;
