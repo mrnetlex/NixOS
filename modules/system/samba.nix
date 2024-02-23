@@ -5,7 +5,7 @@
   environment.systemPackages = [ pkgs.cifs-utils ];
 
   #mnt
-  fileSystems."/mnt/mnt" = {
+  fileSystems."/mnt/mnts" = {
     device = "//192.168.1.148/mnt";
     fsType = "cifs";
     options =
@@ -14,7 +14,7 @@
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
 
       in
-      [ "${automount_opts},credentials=/home/netlex/NixOS/nixos/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=/home/netlex/NixOS/secrets/smb-secrets,uid=1000,gid=100" ];
   };
   #docker
   fileSystems."/mnt/docker" = {
@@ -26,6 +26,6 @@
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
 
       in
-      [ "${automount_opts},credentials=/home/netlex/NixOS/nixos/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=/home/netlex/NixOS/secrets/smb-secrets,uid=1000,gid=100" ];
   };
 }
