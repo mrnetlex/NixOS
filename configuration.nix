@@ -199,6 +199,7 @@
     radeontop
     nvtop-amd
     yazi
+    lazygit
     ffmpegthumbnailer
     unar
     file
