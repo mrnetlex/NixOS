@@ -252,8 +252,9 @@
     cbonsai
     # Nix
     nvd
-    nixpkgs-fmt
-    
+    nixpkgs-fmt #nix formater
+    alejandra #other formater
+    deadnix #remove dead nix code
     # Wine and games
     (pkgs.wrapOBS { # dont add obs-studio alone, it takes care of that
     plugins = with pkgs.obs-studio-plugins; [
