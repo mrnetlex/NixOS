@@ -13,6 +13,7 @@
       cat = "bat --style header  --style snip --style changes --style header";
       grep = "rg";
       man = "batman";
+      ncdu = "gdu";
       # Common use
       grubup = "sudo update-grub";
       fixpacman = "sudo rm /var/lib/pacman/db.lck";
@@ -31,7 +32,6 @@
       fgrep = "fgrep --color=auto";
       egrep = "egrep --color=auto";
       hw = "hwinfo --short"; # Hardware Info
-      s = "kitty +kitten ssh";
       tp = "trash-put";
 
       # Funny aliases
