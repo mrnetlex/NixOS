@@ -268,12 +268,13 @@
     ramfetch
     pipes-rs
     pokemon-colorscripts-mac
-    #bsdgames
     cbonsai
     # Nix
     nvd
     nixpkgs-fmt #nix formater
     deadnix #remove dead nix code
+    nix-tree
+    nix-du
     # Wine and games
     (pkgs.wrapOBS {
       # dont add obs-studio alone, it takes care of that
