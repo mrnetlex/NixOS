@@ -216,7 +216,7 @@
     bat-extras.batdiff
     eza
     grc
-    ncdu
+    gdu
     trash-cli
     pingu
     speedtest-rs
@@ -253,6 +253,7 @@
     # Nix
     nvd
     nixpkgs-fmt
+    
     # Wine and games
     (pkgs.wrapOBS { # dont add obs-studio alone, it takes care of that
     plugins = with pkgs.obs-studio-plugins; [
