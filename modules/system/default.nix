@@ -1,3 +1,5 @@
+{config, pkgs, ...}:
+
 {
   imports = [
     ./drives.nix
@@ -6,5 +8,6 @@
     ./samba.nix
     ./security.nix
     ./docker.nix
+    ./stylix.nix
   ];
 }

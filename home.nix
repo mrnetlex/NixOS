@@ -9,11 +9,7 @@
   home.stateVersion = "23.11"; # Don't touch if not needed, read wiki.
   # Imports
   imports = [
-    ./modules/home/kitty.nix
-    ./modules/home/mpv.nix
-    ./modules/home/bat.nix
-    ./modules/home/default_mime.nix
-    ./modules/home/micro.nix
+	./modules/home/default.nix
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
