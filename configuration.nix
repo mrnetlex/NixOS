@@ -257,6 +257,7 @@
     (pkgs.wrapOBS { # dont add obs-studio alone, it takes care of that
     plugins = with pkgs.obs-studio-plugins; [
       obs-gstreamer
+      obs-vaapi
       obs-vkcapture
     ];
     })
