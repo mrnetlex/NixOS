@@ -210,6 +210,7 @@
     filezilla
     xsane
     ocrmypdf
+    gnome.gnome-boxes
     # Terminal
     kitty
     wezterm
@@ -411,6 +412,33 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+
+  #Stylix
+
+  stylix.image = /home/netlex/NixOS/wallpapers/Tokyonight/cafe-at-night_00_3840x2160.png;
+  stylix.polarity = "dark";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyodark-terminal.yaml";
+  stylix.fonts = {
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+
+    sansSerif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Sans";
+    };
+
+    monospace = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Sans Mono";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+  };
 
   # Environmnet variables
   environment.variables = {

@@ -9,6 +9,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs =
@@ -19,11 +20,12 @@
       nixosConfigurations = {
         workstation = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          modules = [
+          modules = 	[
             ./configuration.nix
             inputs.musnix.nixosModules.musnix
             inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.nix-index-database.nixosModules.nix-index
+            inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
