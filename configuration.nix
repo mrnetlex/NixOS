@@ -262,7 +262,6 @@
     ];
     })
     prismlauncher
-    graalvm-ce #better java
     lunar-client
     lutris
     heroic
