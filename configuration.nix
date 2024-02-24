@@ -262,6 +262,8 @@
     ];
     })
     prismlauncher
+    graalvm-ce #better java
+    glfw-wayland-minecraft
     lunar-client
     lutris
     heroic
