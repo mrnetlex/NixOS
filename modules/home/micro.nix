@@ -1,6 +1,7 @@
-{config, pkgs, ...}:
-
-{
+{ config
+, pkgs
+, ...
+}: {
   #Micro
   programs.micro = {
     enable = true;

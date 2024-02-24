@@ -11,27 +11,31 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      workstation = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
-          inputs.musnix.nixosModules.musnix
-          inputs.nix-flatpak.nixosModules.nix-flatpak
-          inputs.nix-index-database.nixosModules.nix-index
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.netlex = import ./home.nix;
+  outputs =
+    inputs @ { nixpkgs
+    , home-manager
+    , ...
+    }: {
+      nixosConfigurations = {
+        workstation = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./configuration.nix
+            inputs.musnix.nixosModules.musnix
+            inputs.nix-flatpak.nixosModules.nix-flatpak
+            inputs.nix-index-database.nixosModules.nix-index
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.netlex = import ./home.nix;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
-        ];
-        specialArgs = { inherit inputs; };
+              # Optionally, use home-manager.extraSpecialArgs to pass
+              # arguments to home.nix
+            }
+          ];
+          specialArgs = { inherit inputs; };
+        };
       };
     };
-  };
 }

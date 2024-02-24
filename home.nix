@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
-
-{
+{ config
+, pkgs
+, ...
+}: {
   # Basics
   home.username = "netlex";
   home.homeDirectory = "/home/netlex";
@@ -17,7 +18,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-
   ];
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
@@ -86,5 +86,4 @@
   #Spotify-player
   home.file.".config/spotify-player/app.toml".source = ./dotfiles/spotify-player/spotify-player.toml;
   home.file.".config/spotify-player/theme.toml".source = ./dotfiles/spotify-player/theme.toml;
-
 }

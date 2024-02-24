@@ -1,12 +1,12 @@
-{ config, pkgs, ... }:
-
-{
-  imports =
-    [
-      # Import nix modules.
-      ./hardware-configuration.nix
-      ./modules/system/default.nix
-    ];
+{ config
+, pkgs
+, ...
+}: {
+  imports = [
+    # Import nix modules.
+    ./hardware-configuration.nix
+    ./modules/system/default.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -121,10 +121,30 @@
     # Change limits for audio programs
   };
   security.pam.loginLimits = [
-    { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
-    { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
-    { domain = "@audio"; item = "nofile"; type = "soft"; value = "99999"; }
-    { domain = "@audio"; item = "nofile"; type = "hard"; value = "524288"; }
+    {
+      domain = "@audio";
+      item = "memlock";
+      type = "-";
+      value = "unlimited";
+    }
+    {
+      domain = "@audio";
+      item = "rtprio";
+      type = "-";
+      value = "99";
+    }
+    {
+      domain = "@audio";
+      item = "nofile";
+      type = "soft";
+      value = "99999";
+    }
+    {
+      domain = "@audio";
+      item = "nofile";
+      type = "hard";
+      value = "524288";
+    }
   ];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -253,15 +273,15 @@
     # Nix
     nvd
     nixpkgs-fmt #nix formater
-    alejandra #other formater
     deadnix #remove dead nix code
     # Wine and games
-    (pkgs.wrapOBS { # dont add obs-studio alone, it takes care of that
-    plugins = with pkgs.obs-studio-plugins; [
-      obs-gstreamer
-      obs-vaapi
-      obs-vkcapture
-    ];
+    (pkgs.wrapOBS {
+      # dont add obs-studio alone, it takes care of that
+      plugins = with pkgs.obs-studio-plugins; [
+        obs-gstreamer
+        obs-vaapi
+        obs-vkcapture
+      ];
     })
     prismlauncher
     graalvm-ce #better java
@@ -290,10 +310,12 @@
   ];
   # Flatpaks
   services.flatpak.enable = true;
-  services.flatpak.remotes = [{
-    name = "flathub";
-    location = "https://flathub.org/repo/flathub.flatpakrepo";
-  }];
+  services.flatpak.remotes = [
+    {
+      name = "flathub";
+      location = "https://flathub.org/repo/flathub.flatpakrepo";
+    }
+  ];
   services.flatpak.packages = [
     "com.boxy_svg.BoxySVG"
   ];
@@ -308,7 +330,7 @@
     noto-fonts-emoji
   ];
   # SERVICES for programs
-  #plocate 
+  #plocate
   services.locate = {
     enable = true;
     package = pkgs.plocate;
@@ -354,7 +376,6 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -406,5 +427,4 @@
     HSA_OVERRIDE_GFX_VERSION = "10.3.0";
     AMD_VULKAN_ICD = "RADV";
   };
-
 }

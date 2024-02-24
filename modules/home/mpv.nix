@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
-
-{
+{ config
+, pkgs
+, ...
+}: {
   programs.mpv = {
     enable = true;
     profiles = {

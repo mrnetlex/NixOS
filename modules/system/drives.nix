@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
-
-{
+{ config
+, pkgs
+, ...
+}: {
   # fstrim
   services.fstrim.enable = true;
   services.fstrim.interval = "weekly";
