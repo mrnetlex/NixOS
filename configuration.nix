@@ -197,6 +197,7 @@
     obsidian
     vscodium
     discord-canary
+    telegram-desktop
     caprine-bin
     nextcloud-client
     easyeffects
@@ -328,7 +329,7 @@
   # Fonts
   fonts.packages = with pkgs; [
     nerdfonts
-    corefonts
+    #corefonts
     vistafonts
     noto-fonts
     noto-fonts-emoji
