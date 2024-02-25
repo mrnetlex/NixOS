@@ -167,6 +167,7 @@
     xdg-desktop-portal-kde
     tokyo-night-gtk
     papirus-icon-theme
+    qogir-icon-theme
     kcalc
     kalendar
     kfind

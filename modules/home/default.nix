@@ -7,5 +7,8 @@
     ./bat.nix
     ./default_mime.nix
     ./micro.nix
+    ./btop.nix
+    ./yazi.nix
+    ./git.nix
   ];
 }
