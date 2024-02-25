@@ -61,7 +61,7 @@
 
          #fzf plugin
          set fzf_preview_dir_cmd eza --all --color=always
-         set fzf_fd_opts --hidden --exclude ~/.local/
+         set fzf_fd_opts --hidden --exclude=~/.local/
          set fzf_diff_highlighter delta --paging=never --width=20
 
          #Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
