@@ -110,12 +110,14 @@
                      contains $flatpakdir $PATH; or set -a PATH $flatpakdir
              end
          end
+
+         #command-not-found fix
+         #source $pkgs[nix-index]/etc/profile.d/command-not-found.sh
     '';
-    
     interactiveShellInit = ''
       set fish_greeting
 
-       # Theme
+      # Theme
          # TokyoNight Color Palette
          set -l foreground c0caf5
          set -l selection 283457
