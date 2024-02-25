@@ -329,7 +329,7 @@
   # Fonts
   fonts.packages = with pkgs; [
     nerdfonts
-    #corefonts
+    corefonts
     vistafonts
     noto-fonts
     noto-fonts-emoji
@@ -405,6 +405,14 @@
       ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
     '';
   };
+
+  # Run normal binaries in nix
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged 
+    # programs here, NOT in environment.systemPackages
+  ];
+  
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
