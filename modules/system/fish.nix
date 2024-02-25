@@ -62,6 +62,7 @@
          #fzf plugin
          set fzf_preview_dir_cmd eza --all --color=always
          set fzf_fd_opts --hidden --exclude ~/.local/
+         set fzf_diff_highlighter delta --paging=never --width=20
 
          #Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
          function __history_previous_command
@@ -154,11 +155,11 @@
          set -g fish_pager_color_selected_background --background=$selection
 
          #fzf
-         export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-      --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
-         --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
-         --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
-         --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+      #    export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+      # --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
+      #    --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
+      #    --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
+      #    --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
          #run fetch
          nitch

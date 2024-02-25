@@ -5,4 +5,6 @@
     enable = true;
     userName = "netlex";
     userEmail = "mrnetlex@gmail.com";
+    delta.enable = true;
+    };
 }

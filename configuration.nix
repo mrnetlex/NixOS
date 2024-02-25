@@ -240,6 +240,7 @@
     eza
     grc
     gdu
+    delta
     trash-cli
     pingu
     speedtest-rs

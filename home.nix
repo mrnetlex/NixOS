@@ -38,7 +38,6 @@
   #Starship
   home.file.".config/starship.toml".source = ./dotfiles/starship.toml;
 
-  };
   #Spotify-player
   home.file.".config/spotify-player/app.toml".source = ./dotfiles/spotify-player/spotify-player.toml;
   home.file.".config/spotify-player/theme.toml".source = ./dotfiles/spotify-player/theme.toml;
