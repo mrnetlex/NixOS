@@ -12,7 +12,7 @@
   stylix.fonts = {
     serif = {
       package = pkgs.nerdfonts;
-      name = "FireCode Nerd Font";
+      name = "Ubuntu Nerd Font";
     };
 
     sansSerif = {
@@ -31,17 +31,12 @@
     };
   };
 
-  stylix = {
-      opacity = let
-        opacity_value = 0.8;
-      in
-        {
-          applications = opacity_value;
-          desktop = opacity_value;
-          popups = opacity_value;
-          terminal = opacity_value;
+  stylix.opacity = {
+          applications = 0.8;
+          desktop = 0.8;
+          popups = 0.8;
+          terminal = 0.8;
         };
-    };
 
 }
 # fucker doesn't want to work in home manager so it will live here, because I'm too lazy to deal with it

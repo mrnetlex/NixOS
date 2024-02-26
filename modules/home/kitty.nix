@@ -3,10 +3,10 @@
 , ...
 }: {
   #Kitty config
-  stylix.targets.kitty.enable = false;
+  stylix.targets.kitty.enable = true;
   programs.kitty = {
     enable = true;
-    theme = "Tokyo Night";
+    #theme = "Tokyo Night";
     font.name = "JetBrainsMono Nerd Font";
     settings = {
       update_check_interval = 0;
@@ -17,10 +17,10 @@
       shell = "fish";
       # Blur
       linux_display_server = "x11";
-      background_opacity = "0.8";
+      #background_opacity = "0.8";
       background_blur = "64";
       # Tab bar
-      tab_bar_style = "powerline";
+      tab_bar_style = "fade";
       tab_powerline_style = "round";
     };
     shellIntegration.enableFishIntegration = true;

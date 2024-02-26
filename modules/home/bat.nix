@@ -6,7 +6,7 @@
   programs.bat = {
     enable = true;
     config = {
-      theme = "tokyonight";
+      theme = "base16-stylix";
     };
     themes = {
       tokyonight = {
