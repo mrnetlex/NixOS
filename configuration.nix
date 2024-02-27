@@ -219,7 +219,6 @@
     wezterm
     nerdfonts
     micro
-    wl-clipboard
     btop
     radeontop
     nvtop-amd
