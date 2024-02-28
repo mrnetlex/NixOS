@@ -10,6 +10,7 @@
     ./docker.nix
     ./flatpak.nix
     ./stylix.nix
+    ./openrgb_service.nix
     ./variables.nix
     ./packages.nix
   ];
