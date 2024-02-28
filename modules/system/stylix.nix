@@ -2,7 +2,7 @@
 
 {
   #Stylix
-  stylix.image = /home/netlex/NixOS/wallpapers/Tokyonight/cafe-at-night_00_3840x2160.png; #sets wallpapaer
+  stylix.image = ../.././wallpapers/Tokyonight/cafe-at-night_00_3840x2160.png; #sets wallpapaer
   stylix.polarity = "dark"; #if option below isn't specified it will generate colorscheme based on wallpaper
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyodark-terminal.yaml"; #colorscheme taken from https://github.com/tinted-theming/base16-schemes (repo is now archived so might change)
   stylix.cursor = {
