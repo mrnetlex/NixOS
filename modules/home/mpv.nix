@@ -32,6 +32,7 @@
         interpolation = true;
         gamma = 8;
         brightness = 1;
+        audio-channels = "stereo";
       };
     };
     defaultProfiles = [ "SDR" ];
