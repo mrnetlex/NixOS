@@ -109,6 +109,7 @@
     smartmontools
     hwinfo
     zathura
+    zotero
     spotify-player
     termusic
     ani-cli
