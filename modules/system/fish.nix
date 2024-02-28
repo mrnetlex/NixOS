@@ -23,25 +23,26 @@
       wget = "wget -c ";
       psmem = "ps auxf | sort -nr -k 4";
       psmem10 = "ps auxf | sort -nr -k 4 | head -10";
-      ".." = "cd ..";
-      "..." = "cd ../..";
-      "...." = "cd ../../..";
-      "....." = "cd ../../../..";
-      "......" = "cd ../../../../..";
+      ".." = "z ..";
+      "..." = "z ../..";
+      "...." = "z ../../..";
+      "....." = "z ../../../..";
+      "......" = "z ../../../../..";
       dir = "dir --color=auto";
       vdir = "vdir --color=auto";
       fgrep = "fgrep --color=auto";
       egrep = "egrep --color=auto";
       hw = "hwinfo --short"; # Hardware Info
       tp = "trash-put";
+      systui = "systemctl-tui";
 
       # Funny aliases
       ping = "pingu";
       tree = "erd";
     };
     shellInit = ''
-      #Starship
-      starship init fish | source
+      	 #Starship
+      	 starship init fish | source
 
          #zoxide
          zoxide init fish | source
