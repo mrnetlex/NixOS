@@ -66,11 +66,13 @@
     nvtop-amd
     yazi
     lazygit
+    systemctl-tui
     ffmpegthumbnailer
     unar
     file
     jq
     poppler
+    wl-clipboard
     glow
     zoxide
     starship
