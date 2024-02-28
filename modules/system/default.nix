@@ -8,6 +8,9 @@
     ./samba.nix
     ./security.nix
     ./docker.nix
+    ./flatpak.nix
     ./stylix.nix
+    ./variables.nix
+    ./packages.nix
   ];
 }
