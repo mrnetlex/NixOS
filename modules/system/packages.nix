@@ -71,7 +71,6 @@
     file
     jq
     poppler
-    wl-clipboard
     glow
     zoxide
     starship
@@ -85,7 +84,6 @@
     grc
     gdu
     delta
-    systemctl-tui
     trash-cli
     pingu
     speedtest-rs
