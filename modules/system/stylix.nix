@@ -37,6 +37,13 @@
           popups = 0.8;
           terminal = 0.8;
         };
-
+  # Stylix generate .gtkrc-2.0, but so do KDE at every startup, so to avoid doing it manually
+  # I use this option to run specified command at every nixos-rebuild automatically
+  system.activationScripts = {
+    	text = 
+    		''
+  		rm /home/netlex/.gtkrc-2.0
+    		'';
+    };
 }
 # fucker doesn't want to work in home manager so it will live here, because I'm too lazy to deal with it

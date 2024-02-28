@@ -207,7 +207,7 @@
     onlyoffice-bin
     nextcloud-client
     onedrivegui
-    upscayl
+	#upscayl
     jellyfin-media-player
     thunderbird
     filezilla
@@ -314,6 +314,8 @@
     yabridge
     yabridgectl
   ];
+
+  
   # Flatpaks
   services.flatpak.enable = true;
   services.flatpak.remotes = [
@@ -326,6 +328,7 @@
     "com.github.tchx84.Flatseal"
     "com.boxy_svg.BoxySVG"
     "io.github.nroduit.Weasis"
+    "org.upscayl.Upscayl"
   ];
   # Fix database for command-not-found. I use external module in flake.nix so this option has to be disabled.
   programs.command-not-found.enable = false;
@@ -408,7 +411,7 @@
       ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
     '';
   };
-
+ 
   # Run normal binaries in nix
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
