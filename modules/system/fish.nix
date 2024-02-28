@@ -6,10 +6,10 @@
     enable = true;
     shellAliases = {
       # Replace some more things with better alternatives
-      ls = "eza -al --color=always --group-directories-first --icons"; # preferred listing
-      la = "eza -a --color=always --group-directories-first --icons"; # all files and dirs
-      ll = "eza -l --color=always --group-directories-first --icons"; # long format
-      lt = "eza -aT --color=always --group-directories-first --icons"; # tree listing
+      ls = "eza -al --color=always --group-directories-first --icons --git --git-repos"; # preferred listing
+      la = "eza -a --color=always --group-directories-first --icons --git --git-repos"; # all files and dirs
+      ll = "eza -l --color=always --group-directories-first --icons --git --git-repos"; # long format
+      lt = "eza -aT --color=always --group-directories-first --icons --git --git-repos"; # tree listing
       ip = "ip -color";
       cat = "bat --style header  --style snip --style changes --style header";
       grep = "rg";
