@@ -3,18 +3,18 @@
 let
   # Define the script content
   myScript = ''
-	#!/bin/sh
-	# PLACE IN /usr/lib/systemd/system-sleep
-	
-	case $1/$2 in
-		pre/*)
-			;;
-		post/*)
-			pkill --signal term -f OpenRGB
-			openrgb --startminimized --profile /home/netlex/NixOS/dotfiles/gradient #replace with location of color profile#
-		;;
-	esac
-	
+    	#!/bin/sh
+    	# PLACE IN /usr/lib/systemd/system-sleep
+    	
+    	case $1/$2 in
+    		pre/*)
+    			;;
+    		post/*)
+    			pkill --signal term -f OpenRGB
+    			openrgb --startminimized --profile /home/netlex/NixOS/dotfiles/gradient #replace with location of color profile#
+    		;;
+    	esac
+    	
   '';
 
 in

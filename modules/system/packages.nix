@@ -1,7 +1,7 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-#Packages
+  #Packages
   environment.systemPackages = with pkgs; [
     # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #Plasma KDE
@@ -49,7 +49,7 @@
     onlyoffice-bin
     nextcloud-client
     onedrivegui
-	#upscayl
+    #upscayl
     jellyfin-media-player
     thunderbird
     filezilla
@@ -109,7 +109,6 @@
     smartmontools
     hwinfo
     zathura
-    zotero
     spotify-player
     termusic
     ani-cli
@@ -159,7 +158,7 @@
     yabridge
     yabridgectl
   ];
-  
+
   # Steam
   programs.steam = {
     enable = true;

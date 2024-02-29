@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
   #Git
   programs.git = {
@@ -6,5 +6,5 @@
     userName = "netlex";
     userEmail = "mrnetlex@gmail.com";
     delta.enable = true;
-    };
+  };
 }
