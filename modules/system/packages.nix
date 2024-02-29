@@ -18,6 +18,7 @@
     filelight
     kdiskmark
     xwaylandvideobridge
+    (callPackage ./VK_hdr_layer.nix {})
     # System
     snapper
     btrfs-assistant

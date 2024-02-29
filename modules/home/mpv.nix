@@ -35,7 +35,7 @@
         audio-channels = "stereo";
       };
     };
-    defaultProfiles = [ "SDR" ];
+    defaultProfiles = [ "HDR" ];
     bindings = {
       "Ctrl+1" = "apply-profile SDR";
       "Ctrl+2" = "apply-profile HDR";
