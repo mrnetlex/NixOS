@@ -15,6 +15,7 @@
 
   # Firmware update (you still need to run them manually)
   services.fwupd.enable = true;
+  hardware.cpu.intel.updateMicrocode = true;
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;

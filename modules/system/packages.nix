@@ -50,7 +50,7 @@
     onlyoffice-bin
     nextcloud-client
     onedrivegui
-    #upscayl
+    upscayl
     jellyfin-media-player
     thunderbird
     filezilla
@@ -92,6 +92,7 @@
     speedtest-rs
     cfspeedtest
     bandwhich
+    wgnord
     tealdeer
     erdtree
     cava
