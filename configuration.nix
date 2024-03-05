@@ -15,7 +15,7 @@
 
   # Firmware update (you still need to run them manually)
   services.fwupd.enable = true;
-
+  
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
@@ -195,6 +195,8 @@
   #openrgb
   services.hardware.openrgb.enable = true;
   services.hardware.openrgb.motherboard = "intel";
+  #gamescope
+  programs.gamescope.enable = true;
   #kde partition manager
   programs.partition-manager.enable = true;
   #corectrl
