@@ -98,6 +98,7 @@
     unimatrix
     cowsay
     lolcat
+    peaclock
     sl
     ripgrep
     fd
