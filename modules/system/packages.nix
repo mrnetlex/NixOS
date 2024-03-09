@@ -7,7 +7,6 @@
     #Plasma KDE
     plasma-browser-integration
     xdg-desktop-portal-kde
-    tokyo-night-gtk
     papirus-icon-theme
     qogir-icon-theme
     kcalc
@@ -17,6 +16,7 @@
     krita
     filelight
     kdiskmark
+    haruna
     xwaylandvideobridge
     (callPackage ./VK_hdr_layer.nix {})
     # System
