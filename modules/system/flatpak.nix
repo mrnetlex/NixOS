@@ -14,6 +14,7 @@
     "com.github.tchx84.Flatseal"
     "com.boxy_svg.BoxySVG"
     "io.github.nroduit.Weasis"
+    "com.usebottles.bottles"
   ];
 
   services.flatpak.update.auto = {
