@@ -24,7 +24,11 @@
   powerManagement.cpuFreqGovernor = "performance";
 
   # ZRAM
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 150;
+  };
 
   # Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
