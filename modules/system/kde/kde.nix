@@ -8,9 +8,20 @@
   #needed for many shit
   programs.dconf.enable = true;
 
+  # XDG
+  xdg = {
+    portal = {
+      enable = true;
+      xdgOpenUsePortal = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-kde
+        xdg-desktop-portal-gtk
+      ];
+    };
+  };
+  # Packages
   environment.systemPackages = with pkgs; [
     plasma-browser-integration
-    xdg-desktop-portal-kde
     papirus-icon-theme
     qogir-icon-theme
     kcalc
@@ -24,4 +35,10 @@
     xwaylandvideobridge
     (callPackage ./VK_hdr_layer.nix {})
   ];
+
+  #kde partition manager
+  programs.partition-manager.enable = true;
+  #kde connect
+  programs.kdeconnect.enable = true;
+  
 }

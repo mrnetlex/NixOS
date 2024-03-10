@@ -100,7 +100,6 @@
     noto-fonts
     noto-fonts-emoji
   ];
-  # List services that you want to enable:
 
   # Open ports in the firewall.
   networking.firewall.enable = true;
@@ -122,31 +121,14 @@
   services.ratbagd.enable = true;
   #onedrive
   services.onedrive.enable = true;
-  #kde connect
-  programs.kdeconnect.enable = true;
   #openrgb
   services.hardware.openrgb.enable = true;
   services.hardware.openrgb.motherboard = "intel";
   #gamescope
   programs.gamescope.enable = true;
-  #kde partition manager
-  programs.partition-manager.enable = true;
   #corectrl
   programs.corectrl.enable = true;
-  # Musnix module
-  musnix.enable = true;
 
-  # XDG
-  xdg = {
-    portal = {
-      enable = true;
-      xdgOpenUsePortal = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-kde
-        xdg-desktop-portal-gtk
-      ];
-    };
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

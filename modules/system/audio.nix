@@ -41,6 +41,10 @@
       value = "524288";
     }
   ];
+
+  # Musnix module
+  musnix.enable = true;
+  
   #Packages
   environment.systemPackages = with pkgs; [
     qpwgraph
