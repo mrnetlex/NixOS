@@ -122,8 +122,8 @@
   #onedrive
   services.onedrive.enable = true;
   #openrgb
-  services.hardware.openrgb.enable = true;
-  services.hardware.openrgb.motherboard = "intel";
+  #services.hardware.openrgb.enable = true;
+  #services.hardware.openrgb.motherboard = "intel";
   #gamescope
   programs.gamescope.enable = true;
   #corectrl

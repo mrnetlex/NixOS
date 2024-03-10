@@ -39,9 +39,9 @@
     jellyfin-media-player
     thunderbird
     filezilla
+    handbrake
     xsane
     ocrmypdf
-    gnome.gnome-boxes
     # Terminal
     kitty
     wezterm
