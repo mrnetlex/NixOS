@@ -13,5 +13,6 @@
     #./openrgb_service.nix
     ./variables.nix
     ./packages.nix
+    ./nixos.nix
   ];
 }
