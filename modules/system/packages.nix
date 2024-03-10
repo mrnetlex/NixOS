@@ -3,22 +3,6 @@
 {
   #Packages
   environment.systemPackages = with pkgs; [
-    # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #Plasma KDE
-    plasma-browser-integration
-    xdg-desktop-portal-kde
-    papirus-icon-theme
-    qogir-icon-theme
-    kcalc
-    kalendar
-    kfind
-    kate
-    krita
-    filelight
-    kdiskmark
-    haruna
-    xwaylandvideobridge
-    (callPackage ./VK_hdr_layer.nix {})
     # System
     snapper
     btrfs-assistant

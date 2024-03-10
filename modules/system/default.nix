@@ -2,10 +2,9 @@
 
 {
   imports = [
-    ./drives.nix
+	./storage/default.nix
+	./kde/default.nix
     ./fish.nix
-    ./nfs.nix
-    ./samba.nix
     ./security.nix
     ./docker.nix
     ./vm.nix
