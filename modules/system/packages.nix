@@ -40,6 +40,7 @@
     spotify
     obsidian
     vscodium
+    discord
     discord-canary
     telegram-desktop
     caprine-bin
