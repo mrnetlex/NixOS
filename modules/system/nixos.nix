@@ -23,5 +23,12 @@
     # Add any missing dynamic libraries for unpackaged 
     # programs here, NOT in environment.systemPackages
   ];
-
+  # Packages
+  environment.systemPackages = with pkgs; [
+    nvd
+    nixpkgs-fmt #nix formater
+    deadnix #remove dead nix code
+    nix-tree
+    nix-du
+  ];
 }

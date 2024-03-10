@@ -14,5 +14,6 @@
     ./variables.nix
     ./packages.nix
     ./nixos.nix
+    ./audio.nix
   ];
 }
