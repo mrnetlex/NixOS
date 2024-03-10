@@ -8,6 +8,7 @@
     ./samba.nix
     ./security.nix
     ./docker.nix
+    ./vm.nix
     ./flatpak.nix
     ./stylix.nix
     #./openrgb_service.nix

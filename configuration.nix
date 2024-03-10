@@ -6,7 +6,6 @@
     # Import nix modules.
     ./hardware-configuration.nix
     ./modules/system/default.nix
-    #./hdr.nix
   ];
 
   # Bootloader.
@@ -15,7 +14,6 @@
 
   # Firmware update (you still need to run them manually)
   services.fwupd.enable = true;
-  hardware.cpu.intel.updateMicrocode = true;
   
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -27,7 +25,7 @@
   zramSwap = {
     enable = true;
     algorithm = "zstd";
-    memoryPercent = 150;
+    memoryPercent = 100;
   };
 
   # Bluetooth
@@ -39,31 +37,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Secure DNS
-  services.dnscrypt-proxy2 = {
-    enable = true;
-    settings = {
-      ipv6_servers = true;
-      require_dnssec = true;
-
-      sources.public-resolvers = {
-        urls = [
-          "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
-          "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
-        ];
-        cache_file = "/var/lib/dnscrypt-proxy2/public-resolvers.md";
-        minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
-      };
-
-      # You can choose a specific set of servers from https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
-      server_names = [ "cloudflare" ];
-    };
-  };
-
-  systemd.services.dnscrypt-proxy2.serviceConfig = {
-    StateDirectory = "dnscrypt-proxy";
-  };
 
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
