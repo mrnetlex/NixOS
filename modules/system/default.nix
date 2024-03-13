@@ -13,6 +13,7 @@
     #./openrgb_service.nix
     ./variables.nix
     ./packages.nix
+    ./mime.nix
     ./nixos.nix
     ./audio.nix
   ];
