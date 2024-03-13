@@ -39,6 +39,8 @@
       # Funny aliases
       ping = "pingu";
       tree = "erd";
+
+      #micro = "nvim";
     };
     shellInit = ''
       	 #Starship

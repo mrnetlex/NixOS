@@ -32,7 +32,7 @@
     nextcloud-client
     easyeffects
     partition-manager
-    libreoffice
+    libreoffice-fresh
     nextcloud-client
     onedrivegui
     upscayl
@@ -47,6 +47,7 @@
     wezterm
     nerdfonts
     micro
+    neovim
     btop
     radeontop
     nvtop-amd

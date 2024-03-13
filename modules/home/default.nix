@@ -9,5 +9,6 @@
     ./btop.nix
     ./yazi.nix
     ./git.nix
+    ./nvim.nix
   ];
 }
