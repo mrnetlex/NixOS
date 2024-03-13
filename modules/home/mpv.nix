@@ -12,6 +12,7 @@
       	keep-open = "no";
         alang = "eng,en,enUS,en-US";
         slang = "eng,en,enUS,en-US";
+        subs-fallback = "no";
         
         profile = "gpu-hq";
         vo = "gpu-next";
@@ -35,11 +36,13 @@
       SDR = {
 		video-output-levels = "full";
       };
+      
       HDR = {
         video-output-levels = "limited";
         gamma = 8;
         brightness = 2;
       };
+        
       clean = {
       	
       };
