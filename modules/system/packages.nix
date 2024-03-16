@@ -84,7 +84,7 @@
     cowsay
     lolcat
     peaclock
-    tomato-c
+    tomato-c-unstable
     sl
     ripgrep
     fd
