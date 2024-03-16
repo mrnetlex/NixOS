@@ -14,7 +14,7 @@
     "com.github.tchx84.Flatseal"
     "com.boxy_svg.BoxySVG"
     "io.github.nroduit.Weasis"
-    "com.usebottles.bottles"
+    "org.libreoffice.LibreOffice"
   ];
 
   services.flatpak.update.auto = {

@@ -32,7 +32,6 @@
     nextcloud-client
     easyeffects
     partition-manager
-    libreoffice-fresh
     nextcloud-client
     onedrivegui
     upscayl
