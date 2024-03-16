@@ -6,6 +6,7 @@
   virtualisation.docker.storageDriver = "btrfs";
   environment.systemPackages = with pkgs; [
   	docker-compose
+  	lazydocker
   ];
   # users.users.netlex.extraGroups = [ "docker" ];
 }
