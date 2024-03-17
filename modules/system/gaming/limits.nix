@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-  # Change limits for audio programs
+  # Change limits for esync
   security.pam.loginLimits = [
     {
       domain = "@username";

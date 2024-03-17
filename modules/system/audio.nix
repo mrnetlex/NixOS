@@ -43,7 +43,7 @@
   ];
 
   # Musnix module
-  musnix.enable = true;
+  musnix.enable = false;
   
   #Packages
   environment.systemPackages = with pkgs; [
