@@ -169,7 +169,6 @@
     fishPlugins.colored-man-pages
     fishPlugins.autopair
     fishPlugins.sponge
-    fishPlugins.grc
     fishPlugins.colored-man-pages
   ];
 }

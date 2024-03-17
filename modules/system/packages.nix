@@ -34,6 +34,7 @@
     partition-manager
     nextcloud-client
     onedrivegui
+    libreoffice-fresh
     upscayl
     jellyfin-media-player
     thunderbird
@@ -84,7 +85,7 @@
     cowsay
     lolcat
     peaclock
-    tomato-c-unstable
+    tomato-c
     sl
     ripgrep
     fd
@@ -134,14 +135,6 @@
     openrgb-with-all-plugins
     corectrl
   ];
-
-  # Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    gamescopeSession.enable = true;
-  };
   # Obsidian electron ovveride
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"

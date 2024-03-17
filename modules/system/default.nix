@@ -4,6 +4,7 @@
   imports = [
 	./storage/default.nix
 	./kde/default.nix
+	./gaming/default.nix
     ./fish.nix
     ./security.nix
     ./docker.nix
