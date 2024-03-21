@@ -33,6 +33,7 @@
     kdiskmark
     haruna
     xwaylandvideobridge
+    kdePackages.qtimageformats #webp for gwenview
     (callPackage ./VK_hdr_layer.nix {})
   ];
 
