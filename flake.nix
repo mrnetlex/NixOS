@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    musnix.url = "github:musnix/musnix";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +22,6 @@
           system = "x86_64-linux";
           modules = [
             ./configuration.nix
-            inputs.musnix.nixosModules.musnix
             inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.nix-index-database.nixosModules.nix-index
             inputs.stylix.nixosModules.stylix

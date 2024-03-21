@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, lib, pkgs, ...}:
 
 {
   # Enable sound with pipewire.
@@ -42,8 +42,33 @@
     }
   ];
 
-  # Musnix module
-  musnix.enable = false;
+  # Udev rules for audio production
+
+  services.udev.extraRules = ''
+  KERNEL=="rtc0", GROUP="audio"
+  KERNEL=="hpet", GROUP="audio"
+  '';
+  # Swappines
+  boot.kernel.sysctl = { "vm.swappiness" = 10; };
+  
+  # Environment variables for plugins
+
+  environment.variables = let
+    makePluginPath = format:
+        (lib.strings.makeSearchPath format [
+          "$HOME/.nix-profile/lib"
+          "/run/current-system/sw/lib"
+          "/etc/profiles/per-user/$USER/lib"
+        ])
+        + ":$HOME/.${format}";
+  in {
+      DSSI_PATH   = makePluginPath "dssi";
+      LADSPA_PATH = makePluginPath "ladspa";
+      LV2_PATH    = makePluginPath "lv2";
+      LXVST_PATH  = makePluginPath "lxvst";
+      VST_PATH    = makePluginPath "vst";
+      VST3_PATH   = makePluginPath "vst3";
+  };
   
   #Packages
   environment.systemPackages = with pkgs; [
