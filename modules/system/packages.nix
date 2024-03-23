@@ -39,7 +39,7 @@
     jellyfin-media-player
     thunderbird
     filezilla
-    handbrake
+    #handbrake
     xsane
     ocrmypdf
     # Terminal
@@ -51,7 +51,7 @@
     helix
     btop
     radeontop
-    nvtop-amd
+    nvtopPackages.amd
     yazi
     lazygit
     systemctl-tui
