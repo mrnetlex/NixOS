@@ -48,6 +48,7 @@
     nerdfonts
     micro
     neovim
+    helix
     btop
     radeontop
     nvtop-amd
