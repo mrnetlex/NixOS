@@ -11,10 +11,9 @@
     ./vm.nix
     ./flatpak.nix
     ./stylix.nix
-    #./openrgb_service.nix
     ./variables.nix
     ./packages.nix
-    ./mime.nix
+    #./mime.nix
     ./nixos.nix
     ./audio.nix
   ];
