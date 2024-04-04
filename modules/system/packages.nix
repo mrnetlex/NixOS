@@ -39,7 +39,7 @@
     jellyfin-media-player
     thunderbird
     filezilla
-    #handbrake
+    handbrake
     xsane
     ocrmypdf
     # Terminal
