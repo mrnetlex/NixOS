@@ -29,6 +29,7 @@
     kfind
     kate
     krita
+    kdenlive
     filelight
     kdiskmark
     haruna
