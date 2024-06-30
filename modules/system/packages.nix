@@ -75,7 +75,7 @@
     gdu
     delta
     trash-cli
-    pingu
+    gping
     speedtest-rs
     cfspeedtest
     bandwhich
