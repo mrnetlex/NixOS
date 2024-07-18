@@ -50,7 +50,7 @@
             {
         	  home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.netlex = import ./host/WSL/home.nix;
+              home-manager.users.netlex = import ./hosts/WSL/home.nix;
             }
           ];
           specialArgs = { inherit inputs; };
