@@ -3,7 +3,7 @@
 {
   imports = [
 	./fish.nix
-	./packages.nix
+	./packages_WSL.nix
 	./docker.nix
 	./security.nix
 	./nixos.nix

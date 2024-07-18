@@ -47,6 +47,7 @@
             ./hosts/WSL/configuration.nix
             NixOS-WSL.nixosModules.wsl
             home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
             {
         	  home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
