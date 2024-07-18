@@ -7,6 +7,7 @@
 	./gaming/default.nix
     ./fish.nix
     ./security.nix
+    ./dns.nix
     ./docker.nix
     ./vm.nix
     ./flatpak.nix
