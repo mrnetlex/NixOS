@@ -9,7 +9,7 @@
 
 {
   imports = [
-    ./modules/system/default.nix
+    ./../../modules/system/WSL.nix
   ];
 
   # WSL
