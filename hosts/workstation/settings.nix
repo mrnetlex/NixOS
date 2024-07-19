@@ -1,7 +1,7 @@
 {
   systemSettings = {
         system = "x86_64-linux";
-        hostname = "WSL-nix";
+        hostname = "workstation";
         username = "netlex";
         timezone = "Europe/Warsaw";
         locale = "en_US.UTF-8";

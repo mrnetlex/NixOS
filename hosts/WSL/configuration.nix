@@ -15,14 +15,14 @@
   # WSL
   wsl.enable = true;
   wsl.nativeSystemd = true;
-  wsl.defaultUser = "netlex";
+  wsl.defaultUser = "${systemSettings.username}";
 
   # System base settings
   time.timeZone = "${systemSettings.timezone}";
-  networking.hostName = "WSL-nix";
+  networking.hostName = "${systemSettings.hostname}";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.netlex = {
+  users.users.${systemSettings.username} = {
     isNormalUser = true;
     description = "netlex";
     extraGroups = [ "wheel" ];

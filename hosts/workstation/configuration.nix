@@ -1,6 +1,4 @@
-{ config
-, pkgs
-, ...
+{ config, pkgs, systemSettings, ...
 }: {
   imports = [
     # Import nix modules.
@@ -32,14 +30,14 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
-  networking.hostName = "workstation"; # Define your hostname.
+  networking.hostName = "${systemSettings.hostname}"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "${systemSettings.timezone}";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -81,7 +79,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.netlex = {
+  users.users.${systemSettings.username} = {
     isNormalUser = true;
     description = "Netlex";
     extraGroups = [ "networkmanager" "wheel" "realtime" "audio" ];

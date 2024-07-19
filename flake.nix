@@ -21,11 +21,7 @@
   };
 
   outputs = inputs @ { self, nixpkgs, NixOS-WSL, home-manager, ...}: 
-    let
-      #systemSettings = {
-      #  username = "netlex";
-      #};
-    in {
+    {
       nixosConfigurations = {
         workstation = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -42,8 +38,8 @@
             }
           ];
           specialArgs = { 
-            #inherit systemSettings;
-            inherit inputs; 
+            inherit inputs;
+            inherit (import ./hosts/workstation/settings.nix) systemSettings; 
           };
         };
 
