@@ -19,7 +19,7 @@
 
   # System base settings
   time.timeZone = "Europe/Warsaw";
-  networking.hostName = "ASUS_B560_WSL";
+  networking.hostName = "WSL-nix";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.netlex = {

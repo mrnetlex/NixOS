@@ -47,6 +47,7 @@
     shellInit = ''
       	 #Starship
       	 starship init fish | source
+         enable_transience
 
          #zoxide
          zoxide init fish | source

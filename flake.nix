@@ -22,7 +22,6 @@
 
   outputs = inputs @ { self, nixpkgs, NixOS-WSL, home-manager, ...}: 
     let
-      # ---- SYSTEM SETTINGS ---- #
       systemSettings = {
         username = "netlex";
       };
@@ -47,7 +46,7 @@
           };
         };
 
-        ASUS_B560_WSL = nixpkgs.lib.nixosSystem {
+        WSL-nix = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             { nix.registry.nixpkgs.flake = nixpkgs; }
@@ -63,7 +62,7 @@
           ];
           specialArgs = { 
             inherit inputs;
-            inherit username; 
+            inherit systemSettings; 
           };
         };
       };
