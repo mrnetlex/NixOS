@@ -42,6 +42,7 @@
             }
           ];
           specialArgs = { 
+            inherit systemSettings;
             inherit inputs; 
           };
         };
