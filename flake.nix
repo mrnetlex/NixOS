@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration";
+  description = "Netlex's NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -20,8 +20,13 @@
     spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
-  outputs =
-    inputs @ { self, nixpkgs, NixOS-WSL, home-manager, ...}: {
+  outputs = inputs @ { self, nixpkgs, NixOS-WSL, home-manager, ...}: 
+    let
+      # ---- SYSTEM SETTINGS ---- #
+      systemSettings = {
+        username = "netlex";
+      };
+    in {
       nixosConfigurations = {
         workstation = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -38,7 +43,6 @@
             }
           ];
           specialArgs = { 
-            username = "netlex";
             inherit inputs; 
           };
         };
@@ -58,12 +62,8 @@
             }
           ];
           specialArgs = { 
-            systemSettings = {
-              system = "x86_64-linux"; # system arch
-              hostname = "snowfire"; # hostname
-              username = "netlex";
-            };
-            inherit inputs; 
+            inherit inputs;
+            inherit username; 
           };
         };
       };
