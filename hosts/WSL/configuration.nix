@@ -5,7 +5,7 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, systemSettings, ... }:
 
 {
   imports = [
@@ -18,7 +18,7 @@
   wsl.defaultUser = "netlex";
 
   # System base settings
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "${systemSettings.timezone}";
   networking.hostName = "WSL-nix";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
