@@ -1,9 +1,12 @@
 {config, pkgs, ...}:
 {
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.enable = true;
+  
+  services.displayManager.sddm.enable = true;
+  services.displayManager.defaultSession = "plasma";
+  
   services.desktopManager.plasma6.enable = true;
-  services.xserver.displayManager.defaultSession = "plasma";
 
   #needed for many shit
   programs.dconf.enable = true;
