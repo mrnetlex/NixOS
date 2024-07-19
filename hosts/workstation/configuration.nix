@@ -40,7 +40,7 @@
   time.timeZone = "${systemSettings.timezone}";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n.defaultLocale = "${systemSettings.locale}";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pl_PL.UTF-8";
@@ -53,10 +53,6 @@
     LC_TELEPHONE = "pl_PL.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Configure keymap in X11
   services.xserver = {

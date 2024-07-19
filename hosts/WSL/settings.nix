@@ -5,6 +5,7 @@
         username = "netlex";
         timezone = "Europe/Warsaw";
         locale = "en_US.UTF-8";
+        mail = "mrnetlex@gmail.com";
       };
 }
 ## So how does this shit works? 
