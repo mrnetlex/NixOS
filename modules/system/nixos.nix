@@ -1,8 +1,13 @@
 {config, pkgs, systemSettings, ...}:
 
 {
-  # NixOS settings
+  # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Disable "warning: Git tree '/home/netlex/nixos' is dirty"
+  nix.extraOptions = "warn-dirty = false";
+  
+  # Automatic nix optimise and garbage collection
   nix.optimise.automatic = true;
   nix.optimise.dates = [ "17:30" ];
   nix.gc = {
@@ -10,6 +15,8 @@
     dates = "weekly";
     options = "--delete-older-than 14d";
   };
+
+  # For nvd to display nice diff when switching configurations
   system.activationScripts.diff = {
     supportsDryActivation = true;
     text = ''

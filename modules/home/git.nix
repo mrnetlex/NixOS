@@ -6,5 +6,8 @@
     userName = "netlex";
     userEmail = "mrnetlex@gmail.com";
     delta.enable = true;
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 }
