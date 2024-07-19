@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, systemSettings, ... }:
 
 {
 
@@ -6,7 +6,7 @@
   programs.dconf.enable = true;
 
   # Add user to libvirtd group
-  users.users.netlex.extraGroups = [ "libvirtd" ];
+  users.users.${systemSettings.username}.extraGroups = [ "libvirtd" ];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [

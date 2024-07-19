@@ -77,7 +77,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${systemSettings.username} = {
     isNormalUser = true;
-    description = "Netlex";
+    description = "My main user";
     extraGroups = [ "networkmanager" "wheel" "realtime" "audio" ];
   };
 

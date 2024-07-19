@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, systemSettings, ... }:
 {
   #Git
   programs.git = {
     enable = true;
-    userName = "netlex";
-    userEmail = "mrnetlex@gmail.com";
+    userName = "${systemSettings.username}";
+    userEmail = "${systemSettings.mail}";
     delta.enable = true;
     extraConfig = {
       init.defaultBranch = "main";

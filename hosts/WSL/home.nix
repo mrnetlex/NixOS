@@ -1,10 +1,8 @@
-{ config
-, pkgs
-, ...
+{ config, pkgs, systemSettings, ...
 }: {
   # Basics
-  home.username = "netlex";
-  home.homeDirectory = "/home/netlex";
+  home.username = "${systemSettings.username}";
+  home.homeDirectory = "/home/${systemSettings.username}";
 
   home.stateVersion = "23.11"; # Don't touch if not needed, read wiki.
   # Imports

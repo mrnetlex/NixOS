@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, systemSettings, ... }:
 
 {
   #Stylix
@@ -43,7 +43,7 @@
   system.activationScripts = {
     text =
       ''
-        		rm /home/netlex/.gtkrc-2.0
+        		rm /home/${systemSettings.username}/.gtkrc-2.0
           		'';
   };
 }

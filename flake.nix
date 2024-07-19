@@ -35,6 +35,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.netlex = import ./hosts/workstation/home.nix;
+              home-manager.extraSpecialArgs = { inherit (import ./hosts/workstation/settings.nix) systemSettings; };
             }
           ];
           specialArgs = { 
@@ -52,9 +53,10 @@
             inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
             {
-        	  home-manager.useGlobalPkgs = true;
+        	    home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.netlex = import ./hosts/WSL/home.nix;
+              home-manager.extraSpecialArgs = { inherit (import ./hosts/WSL/settings.nix) systemSettings; };
             }
           ];
           specialArgs = { 

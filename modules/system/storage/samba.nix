@@ -1,7 +1,6 @@
-{ config
-, pkgs
-, ...
-}: {
+{ config, pkgs, systemSettings, ...}: 
+
+{
   # For mount.cifs, required unless domain name resolution is not needed.
   environment.systemPackages = [ pkgs.cifs-utils ];
 
@@ -14,7 +13,7 @@
         # this line prevents hanging on network split
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
       in
-      [ "${automount_opts},credentials=/home/netlex/NixOS/secrets/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=/home/${systemSettings.username}/NixOS/secrets/smb-secrets,uid=1000,gid=100" ];
   };
   #docker
   fileSystems."/mnt/docker" = {
@@ -25,6 +24,6 @@
         # this line prevents hanging on network split
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
       in
-      [ "${automount_opts},credentials=/home/netlex/NixOS/secrets/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=/home/${systemSettings.username}/NixOS/secrets/smb-secrets,uid=1000,gid=100" ];
   };
 }

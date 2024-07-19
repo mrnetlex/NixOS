@@ -1,6 +1,4 @@
-{ config
-, pkgs
-, ...
+{ config, pkgs, systemSettings, ...
 }: {
   virtualisation.docker.enable = true;
   virtualisation.docker.storageDriver = "btrfs";
@@ -8,5 +6,5 @@
   	docker-compose
   	lazydocker
   ];
-  # users.users.netlex.extraGroups = [ "docker" ];
+  # users.users.${systemSettings.username}.extraGroups = [ "docker" ];
 }
