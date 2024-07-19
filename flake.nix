@@ -37,7 +37,10 @@
               home-manager.users.netlex = import ./hosts/workstation/home.nix;
             }
           ];
-          specialArgs = { inherit inputs; };
+          specialArgs = { 
+            username = "netlex";
+            inherit inputs; 
+          };
         };
 
         ASUS_B560_WSL = nixpkgs.lib.nixosSystem {
@@ -54,7 +57,10 @@
               home-manager.users.netlex = import ./hosts/WSL/home.nix;
             }
           ];
-          specialArgs = { inherit inputs; };
+          specialArgs = { 
+            username = "netlex";
+            inherit inputs; 
+          };
         };
       };
     };
