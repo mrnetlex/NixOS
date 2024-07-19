@@ -58,7 +58,11 @@
             }
           ];
           specialArgs = { 
-            username = "netlex";
+            systemSettings = {
+              system = "x86_64-linux"; # system arch
+              hostname = "snowfire"; # hostname
+              username = "netlex";
+            };
             inherit inputs; 
           };
         };
