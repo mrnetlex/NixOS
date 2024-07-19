@@ -26,7 +26,7 @@
         workstation = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./configuration.nix
+            ./hosts/workstation/configuration.nix
             inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.nix-index-database.nixosModules.nix-index
             inputs.stylix.nixosModules.stylix
@@ -46,8 +46,8 @@
             { nix.registry.nixpkgs.flake = nixpkgs; }
             ./hosts/WSL/configuration.nix
             NixOS-WSL.nixosModules.wsl
-            home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
             {
         	  home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;

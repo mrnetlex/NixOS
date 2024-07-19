@@ -81,9 +81,9 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.netlex = {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "netlex";
+    description = "Netlex";
     extraGroups = [ "networkmanager" "wheel" "realtime" "audio" ];
   };
 

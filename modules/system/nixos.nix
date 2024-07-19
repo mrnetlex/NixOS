@@ -30,5 +30,13 @@
     deadnix #remove dead nix code
     nix-tree
     nix-du
+    nh
   ];
+
+  # NH - nix helper
+  programs.nh = {
+    enable = true;
+    flake = "/home/${username}/nixos";
+  };
+
 }
