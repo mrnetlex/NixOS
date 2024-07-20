@@ -1,5 +1,6 @@
-{ config, pkgs, systemSettings, ...
-}: {
+{ config, pkgs, systemSettings, ...}: 
+
+{
   virtualisation.docker.enable = true;
   virtualisation.docker.storageDriver = "btrfs";
   environment.systemPackages = with pkgs; [
