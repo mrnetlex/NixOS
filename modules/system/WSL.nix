@@ -7,6 +7,7 @@
 #	./docker.nix
 	./security.nix
 	./sops.nix
+	./ssh.nix
 	./nixos.nix
 	./variables.nix
 	./storage/samba.nix

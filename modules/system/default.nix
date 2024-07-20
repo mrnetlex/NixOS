@@ -10,6 +10,7 @@
     ./sops.nix
     ./dns.nix
     ./docker.nix
+    ./ssh.nix
     ./vm.nix
     ./flatpak.nix
     ./stylix.nix
