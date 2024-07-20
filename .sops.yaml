@@ -1,7 +1,11 @@
 keys:
-  - &primary {{YOUR KEY HERE}}
+  - &users:
+    - &master age19vyqeae9ggzpssfev2x0z8w842v86z3zh9czrp7n4vnr6a3fmqvs0ep96q
+  - &hosts:
+    - &WSL age12lxpmvu2pq7wwmx52schs7jt8av6zcwsmykgz46jmduwku7n7uvs2frd26
 creation_rules:
   - path_regex: secrets/secrets.yaml$
     key_groups:
     - age:
-      - *primary
+      - *master
+      - *WSL
