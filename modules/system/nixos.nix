@@ -43,7 +43,7 @@
   # NH - nix helper
   programs.nh = {
     enable = true;
-    flake = "/home/${systemSettings.username}/nixos";
+    flake = "/home/${systemSettings.username}/NixOS";
   };
 
 }

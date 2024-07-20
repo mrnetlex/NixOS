@@ -1,5 +1,6 @@
-{ config, pkgs, systemSettings, ...
-}: {
+{ config, pkgs, systemSettings, ...}: 
+
+{
   # Basics
   home.username = "${systemSettings.username}";
   home.homeDirectory = "/home/${systemSettings.username}";

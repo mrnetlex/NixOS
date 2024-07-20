@@ -5,6 +5,7 @@
     enable = true;
     userName = "${systemSettings.username}";
     userEmail = "${systemSettings.mail}";
+    lfs.enable = true;
     delta.enable = true;
     extraConfig = {
       init.defaultBranch = "main";

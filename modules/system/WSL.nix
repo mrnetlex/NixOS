@@ -8,5 +8,6 @@
 	./security.nix
 	./nixos.nix
 	./variables.nix
+	./storage/samba.nix
   ];
 }
