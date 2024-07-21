@@ -22,10 +22,13 @@
   networking.hostName = "${systemSettings.hostname}";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  sops.secrets.netlex-password.neededForUsers = true;
+  users.mutableUsers = false;
   users.users.${systemSettings.username} = {
     isNormalUser = true;
     description = "My main user";
     extraGroups = [ "wheel" ];
+    hashedPasswordFile = config.sops.secrets.netlex-password.path;
   };
 
   # Allow unfree packages
