@@ -16,7 +16,7 @@
     options = "--delete-older-than 14d";
   };
 
-  # For nvd to display nice diff when switching configurations
+  # For nvd to display nice diff when switching configurations, kinda unnecessery with NH
   system.activationScripts.diff = {
     supportsDryActivation = true;
     text = ''
@@ -37,6 +37,7 @@
     deadnix #remove dead nix code
     nix-tree
     nix-du
+    graphviz #needed for nix-du nice graphs
     nh
   ];
 
