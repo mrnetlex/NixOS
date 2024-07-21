@@ -2,7 +2,7 @@
 
 {
   virtualisation.docker.enable = true;
-  virtualisation.docker.storageDriver = "btrfs";
+  #virtualisation.docker.storageDriver = "btrfs";
   environment.systemPackages = with pkgs; [
   	docker-compose
   	lazydocker
