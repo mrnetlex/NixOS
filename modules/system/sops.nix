@@ -21,7 +21,7 @@
       # automatically impost host SSH keys as age keys
       sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
       # this will use an age key that is expected to already be in filesystem
-      keyFile = "/home/netlex/.config/sops/age/keys.txt";
+      keyFile = "/home/keys.txt";
       # generate a new key if the key specified above does not exist
       generateKey = true;
     };
