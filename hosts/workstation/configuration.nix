@@ -3,7 +3,7 @@
   imports = [
     # Import nix modules.
     ./hardware-configuration.nix
-    ./../../modules/system/default.nix
+    ./../../modules/system/workstation.nix
   ];
 
   # Bootloader.
@@ -75,10 +75,13 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  sops.secrets.netlex-password.neededForUsers = true;
+  users.mutableUsers = false;
   users.users.${systemSettings.username} = {
     isNormalUser = true;
     description = "My main user";
     extraGroups = [ "networkmanager" "wheel" "realtime" "audio" ];
+    hashedPasswordFile = config.sops.secrets.netlex-password.path;
   };
 
   # Allow unfree packages
