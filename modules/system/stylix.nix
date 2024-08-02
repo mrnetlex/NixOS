@@ -3,9 +3,9 @@
 {
   #Stylix
   stylix.enable = true;
-  stylix.image = ../.././wallpapers/Unthemed/Scenery/reversed.jpg; #sets wallpapaer
+  stylix.image = ../.././wallpapers/Tokyonight/043.png; #sets wallpapaer
   stylix.polarity = "dark"; #if option below isn't specified it will generate colorscheme based on wallpaper
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml"; #colorscheme taken from https://github.com/tinted-theming/base16-schemes (repo is now archived so might change)
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyodark-terminal.yaml"; #colorscheme taken from https://github.com/tinted-theming/schemes (repo is now archived so might change)
   stylix.cursor = {
     package = pkgs.qogir-icon-theme;
     name = "Qogir";

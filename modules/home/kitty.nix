@@ -3,10 +3,10 @@
 , ...
 }: {
   #Kitty config
-  stylix.targets.kitty.enable = true;
+  stylix.targets.kitty.enable = false;
   programs.kitty = {
     enable = true;
-    #theme = "Tokyo Night";
+    theme = "Tokyo Night";
     font.name = "JetBrainsMono Nerd Font";
     settings = {
       update_check_interval = 0;

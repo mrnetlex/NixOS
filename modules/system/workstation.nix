@@ -6,9 +6,10 @@
 	./kde/default.nix
 	./gaming/default.nix
     ./fish.nix
+    ./nvidia.nix
     ./security.nix
     ./sops.nix
-    ./dns.nix
+    #./dns.nix
     ./docker.nix
     ./ssh.nix
     ./vm.nix

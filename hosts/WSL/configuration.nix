@@ -26,7 +26,7 @@
   users.mutableUsers = false;
   users.users.${systemSettings.username} = {
     isNormalUser = true;
-    description = "My main user";
+    description = "${systemSettings.username}";
     extraGroups = [ "wheel" ];
     hashedPasswordFile = config.sops.secrets.netlex-password.path;
   };
