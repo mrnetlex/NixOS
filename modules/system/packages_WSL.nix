@@ -3,6 +3,7 @@
 {
   #Packages
   environment.systemPackages = with pkgs; [
+    firefox
 	git
     killall
     unzip
@@ -22,6 +23,7 @@
     file
     jq
     poppler
+    wl-clipboard
 	zoxide
     starship
     navi
@@ -46,6 +48,7 @@
     lolcat
     peaclock
     browsh
+    wego
     tomato-c
     sl
     trash-cli
@@ -58,7 +61,7 @@
     termusic
     ani-cli
     nitch
-    neofetch
+    fastfetch
     ramfetch
     pipes-rs
     pokemon-colorscripts-mac

@@ -87,6 +87,7 @@
     lolcat
     peaclock
     browsh
+    wego
     tomato-c
     sl
     ripgrep
@@ -104,7 +105,7 @@
     termusic
     ani-cli
     nitch
-    neofetch
+    fastfetch
     ramfetch
     pipes-rs
     pokemon-colorscripts-mac
