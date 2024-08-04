@@ -3,7 +3,7 @@
 {
   imports = [
     ./drives.nix
-    ./nfs.nix
+#    ./nfs.nix
     ./samba.nix
   ];
 }
