@@ -18,6 +18,7 @@
   wsl.defaultUser = "${systemSettings.username}";
   wsl.startMenuLaunchers = true;
   wsl.usbip.enable = true;
+  wsl.wslConf.network.generateResolvConf = false;
 
   # System base settings
   time.timeZone = "${systemSettings.timezone}";

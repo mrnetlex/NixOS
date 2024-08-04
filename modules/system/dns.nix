@@ -14,6 +14,7 @@ in
 
   config = mkIf cfg.dns.enable {
     #custom settings in here
+    networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
     # Secure DNS
     services.dnscrypt-proxy2 = {
       enable = true;
