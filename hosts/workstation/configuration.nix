@@ -87,8 +87,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Fix database for command-not-found. I use external module in flake.nix so this option has to be disabled.
-  programs.command-not-found.enable = false;
   # Fonts
   fonts.packages = with pkgs; [
     nerdfonts

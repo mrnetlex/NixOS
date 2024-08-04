@@ -32,11 +32,12 @@
             { nix.registry.nixpkgs.flake = nixpkgs; }
             ./hosts/WSL/configuration.nix
             NixOS-WSL.nixosModules.wsl
+            inputs.nix-index-database.nixosModules.nix-index
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
             {
-        	    home-manager.useGlobalPkgs = true;
+        	  home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.netlex = import ./hosts/WSL/home.nix;
               home-manager.extraSpecialArgs = { inherit (import ./hosts/WSL/settings.nix) systemSettings; };
