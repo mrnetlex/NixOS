@@ -30,11 +30,13 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
+  # Networking
   networking.hostName = "${systemSettings.hostname}"; # Define your hostname.
+  networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "none";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+  custom.dns.enable = true;
 
   # Set your time zone.
   time.timeZone = "${systemSettings.timezone}";
