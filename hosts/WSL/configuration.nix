@@ -16,6 +16,8 @@
   wsl.enable = true;
   wsl.nativeSystemd = true;
   wsl.defaultUser = "${systemSettings.username}";
+  wsl.startMenuLaunchers = true;
+  wsl.usbip.enable = true;
 
   # System base settings
   time.timeZone = "${systemSettings.timezone}";
@@ -54,4 +56,8 @@
       fi
     '';
   };
+
+  #test custom options dns
+
+  custom.dns.enable = true;
 }
