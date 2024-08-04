@@ -11,5 +11,6 @@
 	./nixos.nix
 	./variables.nix
 	./storage/samba.nix
+	./dns.nix
   ];
 }
