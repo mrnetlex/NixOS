@@ -9,14 +9,14 @@
     ./nvidia.nix
     ./security.nix
     ./sops.nix
-    #./dns.nix
+    ./dns.nix
     ./docker.nix
     ./ssh.nix
     ./vm.nix
     ./flatpak.nix
     ./stylix.nix
     ./variables.nix
-    ./packages.nix
+    ./packages_workstation.nix
     #./mime.nix
     ./nixos.nix
     ./audio.nix

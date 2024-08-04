@@ -17,6 +17,7 @@
     mpv
     wget
     curl
+    rsync
     gimp
     firefox
     brave
@@ -39,7 +40,7 @@
     jellyfin-media-player
     thunderbird
     filezilla
-    #handbrake
+    handbrake
     xsane
     ocrmypdf
     # Terminal
@@ -50,8 +51,6 @@
     neovim
     helix
     btop
-    radeontop
-    nvtopPackages.amd
     yazi
     lazygit
     systemctl-tui
@@ -76,6 +75,7 @@
     delta
     trash-cli
     gping
+    doggo
     speedtest-rs
     cfspeedtest
     bandwhich
@@ -86,6 +86,7 @@
     cowsay
     lolcat
     peaclock
+    browsh
     tomato-c
     sl
     ripgrep
@@ -134,7 +135,6 @@
     piper
     libratbag
     openrgb-with-all-plugins
-    corectrl
   ];
   # Obsidian electron ovveride
   nixpkgs.config.permittedInsecurePackages = [

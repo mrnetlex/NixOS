@@ -10,12 +10,14 @@
     neovim
     wget
     curl
+    rsync
     helix
     btop
 	yazi
     lazygit
     systemctl-tui
     ffmpegthumbnailer
+    glow
     unar
     file
     jq
@@ -33,6 +35,7 @@
     gdu
     delta
 	gping
+    doggo
     speedtest-rs
     cfspeedtest
     bandwhich
@@ -42,6 +45,7 @@
     cowsay
     lolcat
     peaclock
+    browsh
     tomato-c
     sl
     trash-cli
@@ -50,7 +54,6 @@
     du-dust
     duf
     progress
-	zathura
     spotify-player
     termusic
     ani-cli
