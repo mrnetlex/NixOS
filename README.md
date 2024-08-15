@@ -1,21 +1,29 @@
-## Netlex's flake for various hosts
+
+# Netlex's NixOS Flake for Multiple Hosts
+
 [![](https://img.shields.io/badge/OS-NixOS-6e9bcb?logo=NixOS)](https://nixos.org)
-  It's my personal NixOS flake that I use on few hosts (in future I will replace Ubuntu with NixOS in my little homelab) and also few other config files / wallpapers.
-### Warning 
- I'm not too good with Nix so take everything written here with grain of salt. And also setup is rather opinionated for my own taste.
 
-### What do I use?
-- [flakes](https://wiki.nixos.org/wiki/Flakes) - it's just easier to use other nix tooling
-- [home-manager](https://wiki.nixos.org/wiki/Home_Manager) - managing `.config`
-- [stylix](https://github.com/danth/**stylix**) - theming
-- [sops-nix](https://github.com/Mic92/sops-nix) - secret's encryption
-- [nix-flatpak](https://github.com/gmodena/nix-flatpak) - declarative flatpaks
-- [nh](https://github.com/viperML/nh) - nix helper
+Welcome to my personal NixOS flake repository. This is the configuration I currently use across several hosts, including plans to transition my homelab from Ubuntu to NixOS in the near future. You'll also find some additional configuration files and wallpapers included here.
 
-### What I planning to setup
-- custom ISO image
-- declarative disk partitioning with [disko](https://github.com/nix-community/disko)
-- GitHub actions to automatically bump flake.lock and do flake check
+### ⚠️ Disclaimer
+I'm still learning the ropes with Nix, so please consider this setup as a work in progress. It’s tailored to my personal preferences, so it may not suit everyone.
 
-### Shout-out
-This setup wouldn't be possible without videos from [LibrePhoenix](https://youtube.com/@librephoenix?si=VNcCjVlFrGQxMPm4), [EmergentMind](https://youtube.com/@emergent_mind?si=UE3dkOotAzdUwU8O) and whole nix community from where I stolen bits and pieces of code. Wallpapers are collected from so many places
+### 🚀 Tools & Technologies
+Here are the key tools and technologies I’m using:
+
+- **[flakes](https://wiki.nixos.org/wiki/Flakes):** Simplifies the use of other Nix tooling.
+- **[home-manager](https://wiki.nixos.org/wiki/Home_Manager):** Manages my `.config` files.
+- **[stylix](https://github.com/danth/stylix):** Handles theming.
+- **[sops-nix](https://github.com/Mic92/sops-nix):** Manages encrypted secrets.
+- **[nix-flatpak](https://github.com/gmodena/nix-flatpak):** Enables declarative flatpak installations.
+- **[nh](https://github.com/viperML/nh):** A helper tool for working with Nix.
+
+### 🛠️ Future Plans
+Here’s what I’m planning to add next:
+
+- Create a custom ISO image.
+- Set up declarative disk partitioning with [disko](https://github.com/nix-community/disko).
+- Implement GitHub Actions to automatically update `flake.lock` and perform `flake check`.
+
+### 🎉 Acknowledgments
+A huge shout-out to the Nix community and content creators who made this setup possible. Special thanks to [LibrePhoenix](https://youtube.com/@librephoenix?si=VNcCjVlFrGQxMPm4) and [EmergentMind](https://youtube.com/@emergent_mind?si=UE3dkOotAzdUwU8O) for their incredibly helpful videos. The wallpapers included here were sourced from various places.
