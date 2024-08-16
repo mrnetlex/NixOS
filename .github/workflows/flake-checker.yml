@@ -1,18 +1,22 @@
+name: "Check configuration"
+
 on:
-  pull_request:
   push:
-    branches: [main]
+  pull_request:
 
 jobs:
-  build:
-    name: Build Nix targets
-    runs-on: ubuntu-22.04
+  check:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Check Nix flake inputs
-        uses: DeterminateSystems/flake-checker-action@v7 # This action
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v9
+        uses: cachix/install-nix-action@v24
         with:
           extra_nix_config: |
-            experimental-features = nix-command flakes 
+            experimental-features = nix-command flakes  
+
+      - name: Run flake check
+        uses: DeterminateSystems/flake-checker-action@v5
