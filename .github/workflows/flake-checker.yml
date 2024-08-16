@@ -10,8 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Check Nix flake inputs
-        uses: DeterminateSystems/flake-checker-action@v4 # This action
+        uses: DeterminateSystems/flake-checker-action@v7 # This action
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v3
-      - name: Build default package
-        run: nix build
+        uses: DeterminateSystems/nix-installer-action@v9
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes 
+      - name: Run statix check
+        run: nix run 'nixpkgs/nixos-unstable#statix' -- check .
+
+      - name: Run deadnix check
+        run: nix run 'nixpkgs/nixos-unstable#deadnix' -- .
