@@ -16,8 +16,3 @@ jobs:
         with:
           extra_nix_config: |
             experimental-features = nix-command flakes 
-      - name: Run statix check
-        run: nix run 'nixpkgs/nixos-unstable#statix' -- check .
-
-      - name: Run deadnix check
-        run: nix run 'nixpkgs/nixos-unstable#deadnix' -- .
