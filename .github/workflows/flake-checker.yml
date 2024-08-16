@@ -13,7 +13,7 @@
 
     check-owner: # optional, default is true
     # Whether to check that the root Nixpkgs input has a supported Git ref. Currently supported
-refs: `nixos-22.11`, `nixos-22.11-small`, `nixos-23.05`, `nixos-23.05-small`, `nixos-unstable`,
+    refs: `nixos-22.11`, `nixos-22.11-small`, `nixos-23.05`, `nixos-23.05-small`, `nixos-unstable`,
 `nixos-unstable-small`, `nixpkgs-22.11-darwin`, `nixpkgs-23.05-darwin`, `nixpkgs-unstable`.
 
     check-supported: # optional, default is true
