@@ -1,4 +1,4 @@
-            - name: Nix Flake Checker
+- name: Nix Flake Checker
   # You may pin to the exact commit or the version.
   # uses: DeterminateSystems/flake-checker-action@8b835765e5dc9bd4ad43dd9493eb594f313f4b7d
   uses: DeterminateSystems/flake-checker-action@v7
