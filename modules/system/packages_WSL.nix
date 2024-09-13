@@ -31,7 +31,7 @@
     bat
     bat-extras.batman
     bat-extras.batgrep
-    #bat-extras.batdiff
+    bat-extras.batdiff
     eza
     grc
     gdu
@@ -58,7 +58,6 @@
     duf
     progress
     spotify-player
-    termusic
     ani-cli
     nitch
     fastfetch
