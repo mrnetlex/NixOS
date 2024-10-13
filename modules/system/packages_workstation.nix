@@ -17,6 +17,7 @@
     mpv
     wget
     curl
+    cloudflared
     rsync
     gimp
     firefox

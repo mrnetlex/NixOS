@@ -39,15 +39,20 @@
     #nix-du
     graphviz #needed for nix-du nice graphs
     nh
+    comma # runs command with nix-shell if comma is added at begininng e.x. ", unrar"
   ];
+
+  # Nix index
+  programs.nix-index-database.comma.enable = true;
+  programs.nix-index.enable = true;
+
+  # Fix database for command-not-found. I use external module in flake.nix so this option has to be disabled.
+  programs.command-not-found.enable = false;
 
   # NH - nix helper
   programs.nh = {
     enable = true;
     flake = "/home/${systemSettings.username}/NixOS";
   };
-
-  # Fix database for command-not-found. I use external module in flake.nix so this option has to be disabled.
-  programs.command-not-found.enable = false;
 
 }

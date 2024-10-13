@@ -11,6 +11,7 @@
     neovim
     wget
     curl
+    cloudflared
     rsync
     helix
     btop
