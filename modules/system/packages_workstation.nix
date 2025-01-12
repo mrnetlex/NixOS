@@ -68,8 +68,8 @@
     fzf
     bat
     #bat-extras.batman
-    bat-extras.batgrep
-    bat-extras.batdiff
+    #bat-extras.batgrep
+    #bat-extras.batdiff
     eza
     grc
     gdu
