@@ -67,7 +67,7 @@
     navi
     fzf
     bat
-    bat-extras.batman
+    #bat-extras.batman
     bat-extras.batgrep
     bat-extras.batdiff
     eza
