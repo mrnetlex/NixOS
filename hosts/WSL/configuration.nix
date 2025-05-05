@@ -14,7 +14,6 @@
 
   # WSL
   wsl.enable = true;
-  wsl.nativeSystemd = true;
   wsl.defaultUser = "${systemSettings.username}";
   wsl.startMenuLaunchers = true;
   wsl.usbip.enable = true;

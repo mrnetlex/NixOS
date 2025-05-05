@@ -108,7 +108,6 @@
   services.locate = {
     enable = true;
     package = pkgs.plocate;
-    localuser = null;
   };
   #preload
   services.preload.enable = true;
