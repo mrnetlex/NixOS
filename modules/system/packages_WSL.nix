@@ -3,7 +3,6 @@
 {
   #Packages
   environment.systemPackages = with pkgs; [
-    firefox
 	git
     killall
     unzip
