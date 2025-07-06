@@ -27,6 +27,14 @@
       smb-creds = { };
       netlex-password = { };
       private-ssh = { };
+      atuin-session = { 
+		owner = "netlex";
+		mode = "0600";
+      };
+      atuin-key = { 
+      	owner = "netlex";
+      	mode = "0600";
+      };
     };
   };
 }

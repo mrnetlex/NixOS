@@ -55,6 +55,9 @@
          #navi
          navi widget fish | source
 
+         #atuin
+         atuin init fish | source
+
          #bathelp
 
          function bathelp
