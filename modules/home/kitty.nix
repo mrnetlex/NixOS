@@ -3,7 +3,6 @@
 , ...
 }: {
   #Kitty config
-  stylix.targets.kitty.enable = false;
   programs.kitty = {
     enable = true;
     theme = "Tokyo Night";
