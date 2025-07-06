@@ -8,5 +8,6 @@
     ./yazi.nix
     ./git.nix
     ./nvim.nix
+    ./atuin.nix
   ];
 }
