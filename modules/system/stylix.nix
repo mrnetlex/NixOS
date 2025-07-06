@@ -46,5 +46,8 @@
         		rm /home/${systemSettings.username}/.gtkrc-2.0
           		'';
   };
+  stylix.targets.btop.enable = false;
+  stylix.targets.bat.enable = false;
+  stylix.targets.kitty.enable = false;
 }
 # fucker doesn't want to work in home manager so it will live here, because I'm too lazy to deal with it

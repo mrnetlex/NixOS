@@ -2,7 +2,6 @@
 
 {
   #Btop
-  stylix.targets.btop.enable = false;
   programs.btop = {
     enable = true;
     settings = {

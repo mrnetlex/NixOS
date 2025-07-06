@@ -8,6 +8,8 @@
       sync_frequency = "5m";
       sync_address = "https://api.atuin.sh";
       search_mode = "fuzzy";
+      style = "full";
+      enter_accept = true;
       session_path = "/run/secrets/atuin-session";
       key_path = "/run/secrets/atuin-key";
     enableFishIntegration= true;
