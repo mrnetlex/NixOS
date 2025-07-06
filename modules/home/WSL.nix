@@ -8,6 +8,5 @@
     ./yazi.nix
     ./git.nix
     ./nvim.nix
-    ./firefox.nix
   ];
 }
