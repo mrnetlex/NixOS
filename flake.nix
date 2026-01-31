@@ -50,8 +50,22 @@
         };
       };
       homeConfigurations = {
-        "netlex@ubuntu-server" = home-manager.lib.homeManagerConfiguration {
+        "netlex@ubuntu-server-x86" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/ubuntu-server/home.nix # Create this file
+            {
+              home = {
+                username = "netlex";
+                homeDirectory = "/home/netlex";
+                stateVersion = "25.11"; # Match your current install
+              };
+            }
+          ];
+        };
+        "netlex@ubuntu-server-arm" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."aarch64-linux";
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
