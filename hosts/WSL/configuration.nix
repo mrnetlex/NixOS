@@ -47,7 +47,7 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
   # Services for programs
-  services.tailscale.enable = true
+  services.tailscale.enable = true;
 
   # Fish as a default shell
   programs.bash = {

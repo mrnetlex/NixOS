@@ -125,7 +125,7 @@
   #corectrl
   programs.corectrl.enable = true;
   #tailscale
-  services.tailscale.enable = true
+  services.tailscale.enable = true;
 
 
   # This value determines the NixOS release from which the default
