@@ -3,12 +3,13 @@
   #Git
   programs.git = {
     enable = true;
-    userName = "${systemSettings.username}";
-    userEmail = "${systemSettings.mail}";
     lfs.enable = true;
-    delta.enable = true;
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
   };
+  programs.git.settings = {
+        init.defaultBranch = "main";
+        user.email = "${systemSettings.mail}";
+        user.name = "${systemSettings.username}";
+      };
+  programs.delta.enable = true;
+  programs.delta.enableGitIntegration = true;
 }
