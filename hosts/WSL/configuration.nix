@@ -46,6 +46,9 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
+  # Services for programs
+  services.tailscale.enable = true
+
   # Fish as a default shell
   programs.bash = {
     interactiveShellInit = ''

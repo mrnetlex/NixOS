@@ -124,6 +124,8 @@
   programs.gamescope.enable = true;
   #corectrl
   programs.corectrl.enable = true;
+  #tailscale
+  services.tailscale.enable = true
 
 
   # This value determines the NixOS release from which the default
