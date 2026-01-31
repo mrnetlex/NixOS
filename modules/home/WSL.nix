@@ -9,5 +9,6 @@
     ./git.nix
     ./nvim.nix
     ./atuin.nix
+    ./ssh.nix
   ];
 }
