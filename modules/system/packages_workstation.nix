@@ -93,7 +93,7 @@
     sl
     ripgrep
     fd
-    du-dust
+    dust
     duf
     progress
     testdisk

@@ -54,7 +54,7 @@
     trash-cli
     ripgrep
     fd
-    du-dust
+    dust
     duf
     progress
     spotify-player
