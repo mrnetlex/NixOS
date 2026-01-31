@@ -16,7 +16,7 @@ in
     #custom settings in here
     networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
     # Secure DNS
-    services.dnscrypt-proxy2 = {
+    services.dnscrypt-proxy = {
       enable = true;
       settings = {
         ipv6_servers = true;
@@ -36,7 +36,7 @@ in
       };
     };
 
-    systemd.services.dnscrypt-proxy2.serviceConfig = {
+    systemd.services.dnscrypt-proxy.serviceConfig = {
       StateDirectory = "dnscrypt-proxy";
     };
   };
