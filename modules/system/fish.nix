@@ -23,6 +23,7 @@
       wget = "wget -c ";
       psmem = "ps auxf | sort -nr -k 4";
       psmem10 = "ps auxf | sort -nr -k 4 | head -10";
+      cd = "z";
       ".." = "z ..";
       "..." = "z ../..";
       "...." = "z ../../..";
@@ -101,15 +102,16 @@
            bind '$' __history_previous_command_arguments
          end
 
-      #yazi
-         function ya
+        #yazi
+
+        function y
              set tmp (mktemp -t "yazi-cwd.XXXXX")
              yazi $argv --cwd-file="$tmp"
              if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
              	cd -- "$cwd"
              end
              rm -f -- "$tmp"
-         end
+        end
 
          #Flatpak fix
          set -l xdg_data_home $XDG_DATA_HOME ~/.local/share
