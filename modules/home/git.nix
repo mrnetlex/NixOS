@@ -7,6 +7,7 @@
   };
   programs.git.settings = {
         init.defaultBranch = "main";
+        init.defaultRemote = "origin";
         user.email = "${systemSettings.mail}";
         user.name = "${systemSettings.username}";
       };
