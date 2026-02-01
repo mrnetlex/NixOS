@@ -10,6 +10,9 @@
         sort_by = "natural";
         sort_dir_first = true;
         sort_reverse = false;
+        linemode = "size";
+        show_symlink = true;
+        
       };
     };
   };
