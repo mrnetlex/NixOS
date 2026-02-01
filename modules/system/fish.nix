@@ -13,7 +13,6 @@
       ip = "ip -color";
       cat = "bat --style header  --style snip --style changes --style header";
       grep = "rg";
-      man = "batman";
       ncdu = "gdu";
       # Common use
       grubup = "sudo update-grub";
