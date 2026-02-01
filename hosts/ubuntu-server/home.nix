@@ -23,6 +23,7 @@
 	television
 	traceroute
 	trash-cli
+	progress
 	yazi
 	zellij
 	zoxide
