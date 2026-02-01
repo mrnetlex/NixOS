@@ -15,6 +15,16 @@
         
       };
     };
+    plugins = {
+      "full-border" = pkgs.yaziPlugins.full-border;
+      "lazygit" = pkgs.yaziPlugins.lazygit;
+      "smart-enter" = pkgs.yaziPlugins.smart-enter;
+    };
+    keymap = {
+    	mgr.prepend_keymap = [
+    	  { run = "plugin smart-enter"; on = [ "<l>" ]; }
+    	];
+    };
   };
-  #home.file.".config/yazi/init.lua".source = ../.././dotfiles/yazi/init.lua;
+  home.file.".config/yazi/init.lua".source = ../.././dotfiles/yazi/init.lua;
 }
