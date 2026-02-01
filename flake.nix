@@ -1,7 +1,7 @@
 {
   description = "Netlex's flake";
 
-  outputs = inputs @ { self, nixpkgs, NixOS-WSL, home-manager, ...}: 
+  outputs = inputs @ { self, nixpkgs, home-manager, ...}: 
     {
       nixosConfigurations = {
         workstation = nixpkgs.lib.nixosSystem {
@@ -9,7 +9,7 @@
           modules = [
             ./hosts/workstation/configuration.nix
             inputs.nix-flatpak.nixosModules.nix-flatpak
-            inputs.nix-index-database.nixosModules.nix-index
+            inputs.nix-index-database.nixosModules.default
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
@@ -31,8 +31,9 @@
           modules = [
             { nix.registry.nixpkgs.flake = nixpkgs; }
             ./hosts/WSL/configuration.nix
-            NixOS-WSL.nixosModules.wsl
-            inputs.nix-index-database.nixosModules.nix-index
+            inputs.NixOS-WSL.nixosModules.wsl
+            inputs.nix-index-database.nixosModules.default
+            { programs.nix-index-database.comma.enable = true; }
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
