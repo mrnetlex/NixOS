@@ -4,7 +4,6 @@
   imports = [
 	./fish.nix
 	./packages_WSL.nix
-	./docker.nix
 	./security.nix
 	./sops.nix
 	./ssh.nix
