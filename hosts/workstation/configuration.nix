@@ -3,7 +3,7 @@
   imports = [
     # Import nix modules.
     ./hardware-configuration.nix
-    ./../../modules/system/workstation.nix
+    ./imports-syste.nix
   ];
 
   # Bootloader.

@@ -5,7 +5,7 @@
   #Kitty config
   programs.kitty = {
     enable = true;
-    theme = "Tokyo Night";
+    themeFile = "tokyo_night_night";
     font.name = "JetBrainsMono Nerd Font";
     settings = {
       update_check_interval = 0;

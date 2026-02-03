@@ -8,7 +8,7 @@
   home.stateVersion = "23.11"; # Don't touch if not needed, read wiki.
   # Imports
   imports = [
-    ./../../modules/home/workstation.nix
+    ./imports-home.nix
   ];
 
   # Home Manager can also manage your environment variables through
