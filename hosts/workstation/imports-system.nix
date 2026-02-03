@@ -14,7 +14,7 @@
     ./../../modules/system/ssh.nix
     ./../../modules/system/vm.nix
     ./../../modules/system/flatpak.nix
-    ./../../modules/system/stylix.nix
+#    ./../../modules/system/stylix.nix STYLIX NEED FIXING - maybe full config rebuild
     ./../../modules/system/variables.nix
     ./../../modules/system/packages_workstation.nix
     #./../../modules/system/mime.nix

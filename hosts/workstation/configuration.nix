@@ -3,7 +3,7 @@
   imports = [
     # Import nix modules.
     ./hardware-configuration.nix
-    ./imports-syste.nix
+    ./imports-system.nix
   ];
 
   # Bootloader.
@@ -109,8 +109,6 @@
     enable = true;
     package = pkgs.plocate;
   };
-  #preload
-  services.preload.enable = true;
   #ananicy
   services.ananicy.enable = true;
   #libratbag
