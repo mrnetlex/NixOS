@@ -52,6 +52,6 @@
   };
 
   # Skip man pages creation for faster rebuilds
-  documentation.enable = false;
+  documentation.man.generateCaches = false;
 
 }
