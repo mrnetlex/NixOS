@@ -1,7 +1,5 @@
-{ config
-, pkgs
-, ...
-}: {
+{ config, pkgs, ...}: 
+{
   programs.mpv = {
     enable = true;
     config = {
@@ -13,6 +11,7 @@
         alang = "eng,en,enUS,en-US";
         slang = "eng,en,enUS,en-US";
         subs-fallback = "no";
+        sid = "auto";
         
         profile = "gpu-hq";
         vo = "gpu-next";
@@ -21,37 +20,21 @@
         gpu-api = "vulkan";
         gpu-context = "waylandvk";
         
-        scale = "ewa_lanczossharp";
-        dscale= "mitchell";
-        cscale = "ewa_lanczossharp";
-        tscale = "oversample";
+		glsl-shader = "./../../dotfiles/shaders/FSRCNNX_x2_8-0-4-1.glsl;./../../dotfiles/shaders/KrigBilateral.glsl;./../../dotfiles/shaders/SSimDownscaler.glsl";
+		# glsl-shader = "./../../dotfiles/shaders/KrigBilateral.glsl";
+		# glsl-shader = "./../../dotfiles/shaders/SSimDownscaler.glsl";
+        dscale= "catmull_rom";
         video-sync = "display-resample";
         interpolation = true;
         deband = true;
         dither-depth = "auto";
+        video-output-levels= "full";
         
         audio-channels = "stereo";
+   };
+   scripts = [
+   	pkgs.mpvScripts.autoload
+   ];
+     
     };
-    profiles = {
-      SDR = {
-		video-output-levels = "full";
-      };
-      
-      HDR = {
-        video-output-levels = "limited";
-        gamma = 8;
-        brightness = 2;
-      };
-        
-      clean = {
-      	
-      };
-    };
-    defaultProfiles = [ "HDR" ];
-    bindings = {
-      "Ctrl+1" = "apply-profile SDR";
-      "Ctrl+2" = "apply-profile HDR";
-      "Ctrl+3" = "apply-profile clean";
-    };
-  };
 }
