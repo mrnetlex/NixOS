@@ -1,7 +1,7 @@
 {
   description = "Netlex's flake";
 
-  outputs = inputs @ { self, nixpkgs, home-manager, ...}: 
+  outputs = inputs @ { self, nixpkgs, home-manager, stylix, ...}: 
     {
       nixosConfigurations = {
         workstation = nixpkgs.lib.nixosSystem {
@@ -56,6 +56,7 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
+            inputs.stylix.nixosModules.stylix
             {
               home = {
                 username = "netlex";
@@ -70,6 +71,7 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
+            inputs.stylix.nixosModules.stylix
             {
               home = {
                 username = "netlex";
@@ -99,7 +101,7 @@
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
     spicetify-nix.url = "github:the-argus/spicetify-nix";
