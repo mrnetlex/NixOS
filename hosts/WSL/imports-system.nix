@@ -10,6 +10,7 @@
 	./../../modules/system/nixos.nix
 	./../../modules/system/variables.nix
 	./../../modules/system/storage/samba.nix
+	./../../modules/system/storage/nfs.nix
 	./../../modules/system/dns.nix
   ];
 }
