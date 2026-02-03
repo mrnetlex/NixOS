@@ -7,6 +7,7 @@
     killall
     unzip
 	micro
+	fresh-editor
     neovim
     wget
     curl
