@@ -11,6 +11,7 @@
 	fastfetch
 	fd
 	fzf
+	fresh-editor
 	gdu
 	grc
 	lazydocker
@@ -27,8 +28,9 @@
 	yazi
 	zellij
 	zoxide
-    # Add other ubuntu-specific tools here
   ];
-
-  programs.starship.enable = true; # Optionally manage config here too
+  programs.nh = {
+  	enable = true;
+  	flake = "/home/netlex/NixOS";
+  };
 }
