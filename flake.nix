@@ -50,30 +50,29 @@
           };
         };
       };
-      homeConfigurations = {
-        "netlex@ubuntu-server-x86" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/ubuntu-server/home.nix # Create this file
-          ];
-          specialArgs = { 
-            inherit inputs;
-            inherit (import ./hosts/ubuntu-server/settings-x86.nix) systemSettings; 
-          };
-        };
-        "netlex@ubuntu-server-arm" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages."aarch64-linux";
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/ubuntu-server/home.nix # Create this file
-          ];
-          specialArgs = { 
-            inherit inputs;
-            inherit (import ./hosts/ubuntu-server/settings-arm.nix) systemSettings; 
-          };
-        };
-      };
+		homeConfigurations = {
+		  # 1. Configuration for x86 Server
+		  "netlex@ubuntu-server-x86" = home-manager.lib.homeManagerConfiguration {
+		    pkgs = nixpkgs.legacyPackages."x86_64-linux";
+		    extraSpecialArgs = { 
+		      inherit inputs; 
+		      # Specific settings for x86
+		      inherit (import ./hosts/ubuntu-server/settings-x86.nix) systemSettings; 
+		    };
+		    modules = [ ./hosts/ubuntu-server/home.nix ];
+		  };
+		
+		  # 2. Configuration for ARM Server
+		  "netlex@ubuntu-server-arm" = home-manager.lib.homeManagerConfiguration {
+		    pkgs = nixpkgs.legacyPackages."aarch64-linux";
+		    extraSpecialArgs = { 
+		      inherit inputs; 
+		      # Specific settings for ARM
+		      inherit (import ./hosts/ubuntu-server/settings-arm.nix) systemSettings; 
+		    };
+		    modules = [ ./hosts/ubuntu-server/home.nix ];
+		  };
+		};
     };
 
   inputs = {

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, systemSettings, ... }:
 {
   # Basics
   home.username = "${systemSettings.username}";
