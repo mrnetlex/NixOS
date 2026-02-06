@@ -13,5 +13,6 @@
     ./../../modules/home/nvim.nix
     ./../../modules/home/ssh.nix
     ./../../modules/home/television.nix
+    ./../../modules/home/fastfetch.nix
   ];
 }
