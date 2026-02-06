@@ -56,28 +56,22 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
-            {
-              home = {
-                username = "netlex";
-                homeDirectory = "/home/netlex";
-                stateVersion = "25.11"; # Match your current install
-              };
-            }
           ];
+          specialArgs = { 
+            inherit inputs;
+            inherit (import ./hosts/ubuntu-server/settings-x86.nix) systemSettings; 
+          };
         };
         "netlex@ubuntu-server-arm" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."aarch64-linux";
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
-            {
-              home = {
-                username = "netlex";
-                homeDirectory = "/home/netlex";
-                stateVersion = "25.11"; # Match your current install
-              };
-            }
           ];
+          specialArgs = { 
+            inherit inputs;
+            inherit (import ./hosts/ubuntu-server/settings-arm.nix) systemSettings; 
+          };
         };
       };
     };
