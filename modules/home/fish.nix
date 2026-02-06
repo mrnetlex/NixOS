@@ -155,12 +155,4 @@
                nitch
     '';
   };
-  stylix.targets.fish.enable = false;
-  environment.systemPackages = with pkgs; [
-    # fishPlugins.done # DONT TURN ON - it causes massive lag on WSL-nix
-    fishPlugins.colored-man-pages
-    fishPlugins.autopair
-    fishPlugins.sponge
-    fishPlugins.grc
-  ];
 }
