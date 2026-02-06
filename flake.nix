@@ -56,7 +56,6 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
-            inputs.stylix.nixosModules.stylix
             {
               home = {
                 username = "netlex";
@@ -71,7 +70,6 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/ubuntu-server/home.nix # Create this file
-            inputs.stylix.nixosModules.stylix
             {
               home = {
                 username = "netlex";
