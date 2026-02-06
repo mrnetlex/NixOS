@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, config, ... }: 
 
 {
   programs.atuin = {
@@ -10,8 +10,8 @@
       search_mode = "fuzzy";
       style = "full";
       enter_accept = true;
-      session_path = "/run/secrets/atuin-session";
-      key_path = "/run/secrets/atuin-key";
+      session_path = config.sops.secrets.atuin-session.path;
+      key_path = config.sops.secrets.atuin-key.path;
     enableFishIntegration= true;
     };
   };

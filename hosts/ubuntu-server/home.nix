@@ -24,11 +24,9 @@
     # e.g. /run/secrets/smb-creds
     secrets = {
       atuin-session = { 
-#		owner = "netlex";
 		mode = "0600";
       };
       atuin-key = { 
-#      	owner = "netlex";
       	mode = "0600";
       };
     };
