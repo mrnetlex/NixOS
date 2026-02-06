@@ -10,5 +10,6 @@
     ./../../modules/home/nvim.nix
     ./../../modules/home/atuin.nix
     ./../../modules/home/ssh.nix
+    ./../../modules/home/television.nix
   ];
 }

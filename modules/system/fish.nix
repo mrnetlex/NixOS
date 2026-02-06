@@ -58,20 +58,9 @@
          #atuin
          atuin init fish | source
 
-         #bathelp
+         #television
+         tv init fish | source
 
-         function bathelp
-             bat --plain --language=help $argv
-         end
-
-         function help
-             "$argv" --help ^&1 | bathelp
-         end
-
-         #fzf plugin
-         set fzf_preview_dir_cmd eza --all --color=always
-         set fzf_fd_opts --hidden --exclude=~/.local/
-         set fzf_diff_highlighter delta --paging=never --width=20
 
          #Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
          function __history_previous_command
@@ -162,15 +151,12 @@
                set -g fish_pager_color_description $comment
                set -g fish_pager_color_selected_background --background=$selection
 
-               #fzf
-      	  export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --color 16"
                #run fetch
                nitch
     '';
   };
   stylix.targets.fish.enable = false;
   environment.systemPackages = with pkgs; [
-    fishPlugins.fzf-fish
     # fishPlugins.done # DONT TURN ON - it causes massive lag on WSL-nix
     fishPlugins.colored-man-pages
     fishPlugins.autopair
