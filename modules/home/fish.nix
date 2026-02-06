@@ -59,7 +59,7 @@
          atuin init fish | source
 
          #television
-         tv init fish | source
+         #tv init fish | source
 
 
          #Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -152,7 +152,7 @@
                set -g fish_pager_color_selected_background --background=$selection
 
                #run fetch
-               nitch
+               fastfetch
     '';
   };
 }
