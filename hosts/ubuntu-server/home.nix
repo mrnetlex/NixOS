@@ -49,6 +49,7 @@
 	lazygit
 	navi
 	ripgrep
+	sops
 	starship
 	systemctl-tui
 	tealdeer
