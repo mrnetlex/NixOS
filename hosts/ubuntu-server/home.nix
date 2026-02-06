@@ -36,5 +36,6 @@
   imports = [
   	./../../modules/home/fastfetch.nix
   	./../../modules/home/television.nix
+  	./../../modules/home/fish.nix
   ];
 }
