@@ -26,5 +26,5 @@
     	];
     };
   };
-  home.file.".config/yazi/init.lua".source = ../.././dotfiles/yazi/init.lua;
+  home.file.".config/yazi/init.lua".source = ./../../dotfiles/yazi/init.lua;
 }

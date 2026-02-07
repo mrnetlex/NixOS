@@ -16,5 +16,6 @@
     ./../../modules/home/television.nix
     ./../../modules/home/fastfetch.nix
     ./../../modules/home/cava.nix
+    ./../../modules/home/guitarix.nix
   ];
 }
