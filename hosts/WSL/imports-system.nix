@@ -2,8 +2,8 @@
 
 {
   imports = [
+  	./packages-system.nix
 	./../../modules/system/fish.nix
-	./../../modules/system/packages_WSL.nix
 	./../../modules/system/security.nix
 	./../../modules/system/sops.nix
 	./../../modules/system/ssh.nix

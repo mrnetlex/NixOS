@@ -1,0 +1,32 @@
+{config, pkgs, ...}:
+{
+  home.packages = with pkgs; [
+	bat
+	btop 
+	chezmoi 
+	delta 
+	dust 
+	duf
+	eza
+	fd
+	fzf
+	fresh-editor
+	gdu
+	grc
+	lazydocker
+	lazygit
+	navi
+	ripgrep
+	sops
+	starship
+	systemctl-tui
+	tealdeer
+	television
+	traceroute
+	trash-cli
+	progress
+	yazi
+	zellij
+	zoxide
+  ];
+}

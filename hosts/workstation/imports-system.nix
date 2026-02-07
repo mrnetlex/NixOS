@@ -2,6 +2,7 @@
 
 {
   imports = [
+  	./packages-system.nix
 	./../../modules/system/storage/default.nix
 	./../../modules/system/kde/default.nix
 	./../../modules/system/gaming/default.nix
@@ -16,7 +17,6 @@
     ./../../modules/system/flatpak.nix
 #    ./../../modules/system/stylix.nix STYLIX NEED FIXING - maybe full config rebuild
     ./../../modules/system/variables.nix
-    ./../../modules/system/packages_workstation.nix
     #./../../modules/system/mime.nix
     ./../../modules/system/nixos.nix
     ./../../modules/system/audio.nix

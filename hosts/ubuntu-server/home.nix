@@ -7,41 +7,10 @@
   
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [
-	bat
-	btop 
-	chezmoi 
-	delta 
-	dust 
-	duf
-	eza
-	fd
-	fzf
-	fresh-editor
-	gdu
-	grc
-	lazydocker
-	lazygit
-	navi
-	ripgrep
-	sops
-	starship
-	systemctl-tui
-	tealdeer
-	television
-	traceroute
-	trash-cli
-	progress
-	yazi
-	zellij
-	zoxide
-  ];
-  
   programs.nh = {
   	enable = true;
   	flake = "/home/netlex/NixOS";
   };
-
 
   home.sessionVariables = {
     EDITOR = "micro";
@@ -51,6 +20,7 @@
   home.file.".config/starship.toml".source = ./../../dotfiles/starship.toml;
 
   imports = [
+  	./packages-home.nix
   	./../../modules/home/sops.nix
   	./../../modules/home/fastfetch.nix
   	./../../modules/home/television.nix
