@@ -61,7 +61,7 @@
         };
       };
 		homeConfigurations = {
-		  "netlex@ubuntu-server-x86" = home-manager.lib.homeManagerConfiguration {
+		  "netlex@q957" = home-manager.lib.homeManagerConfiguration {
 		    pkgs = nixpkgs.legacyPackages."x86_64-linux";
 		    extraSpecialArgs = { 
 		      inherit inputs; 
@@ -73,7 +73,7 @@
 		    ];
 		  };
 		
-		  "netlex@ubuntu-server-arm" = home-manager.lib.homeManagerConfiguration {
+		  "netlex@oracle-flex" = home-manager.lib.homeManagerConfiguration {
 		    pkgs = nixpkgs.legacyPackages."aarch64-linux";
 		    extraSpecialArgs = { 
 		      inherit inputs; 

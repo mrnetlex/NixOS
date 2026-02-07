@@ -13,6 +13,7 @@
 	fresh-editor
 	gdu
 	grc
+	gping
 	lazydocker
 	lazygit
 	navi
