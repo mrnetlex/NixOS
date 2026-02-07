@@ -1,0 +1,60 @@
+{
+  "timeStamp": 1756510782052,
+  "version": "1.65.0",
+  "userSettings": {
+    "externalLists": "https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt\nhttps://raw.githubusercontent.com/CrusheerPL/AlleBlockV2/refs/heads/master/AlleBlockV2.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt\nhttps://raw.githubusercontent.com/FiltersHeroes/PolishAnnoyanceFilters/master/PPB.txt\nhttps://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/adblock_social_filters/adblock_social_list.txt\nhttps://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt\nhttps://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/adblock.txt\nhttps://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/anti-adblock.txt\nhttps://www.i-dont-care-about-cookies.eu/abp/",
+    "importedLists": [
+      "https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt",
+      "https://raw.githubusercontent.com/CrusheerPL/AlleBlockV2/refs/heads/master/AlleBlockV2.txt",
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt",
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt",
+      "https://raw.githubusercontent.com/FiltersHeroes/PolishAnnoyanceFilters/master/PPB.txt",
+      "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/adblock_social_filters/adblock_social_list.txt",
+      "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+      "https://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/adblock.txt",
+      "https://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/anti-adblock.txt",
+      "https://www.i-dont-care-about-cookies.eu/abp/"
+    ]
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "adguard-spyware-url",
+    "block-lan",
+    "urlhaus-1",
+    "plowe-0",
+    "fanboy-cookiemonster",
+    "ublock-cookies-easylist",
+    "fanboy-social",
+    "easylist-chat",
+    "easylist-newsletters",
+    "easylist-notifications",
+    "easylist-annoyances",
+    "POL-0",
+    "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt",
+    "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt",
+    "https://raw.githubusercontent.com/FiltersHeroes/PolishAnnoyanceFilters/master/PPB.txt",
+    "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/adblock_social_filters/adblock_social_list.txt",
+    "https://raw.githubusercontent.com/CrusheerPL/AlleBlockV2/refs/heads/master/AlleBlockV2.txt",
+    "https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt",
+    "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+    "https://www.i-dont-care-about-cookies.eu/abp/",
+    "https://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/anti-adblock.txt",
+    "https://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/adblock.txt"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "chrome-extension-scheme",
+    "moz-extension-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true\nno-strict-blocking: 127.0.0.1 true\nno-strict-blocking: polishtorrent.top true",
+  "userFilters": "! 2023-06-06 https://www.reddit.com\nwww.reddit.com##._1b1Jalg2nxA_Z-BjKXRfAV\n\n! 2023-09-15 https://pmvhaven.com\npmvhaven.com##.v-overlay__content > .v-card--variant-elevated.v-card--density-default.v-theme--dark.v-card\n\n! 2023-10-20 https://portainer.netlexvault.com - remove upgrade to BE prompt\nportainer.netlexvault.com##.th-highcontrast\\:text-white.th-highcontrast\\:font-medium.th-highcontrast\\:bg-black.th-highcontrast\\:border-white.th-highcontrast\\:border-solid.th-highcontrast\\:border.th-dark\\:bg-black.th-dark\\:border-\\[\\#343434\\].text-white.font-medium.bg-\\[\\#023959\\].border-blue-9.border-solid.border.hover\\:underline.pr-2.py-2.gap-1.justify-center.items-center.w-full.flex\n\n! Jan 9, 2025 https://pdf.netlexvault.com\npdf.netlexvault.com##.go-pro-badge\n\n! Jan 23, 2025 https://tools.netlexvault.com\ntools.netlexvault.com##.support-button.round.c-button\n\n! Mar 23, 2025 https://pmvhaven.com\npmvhaven.com##.ad-card-title.v-card-title\n\n! YouTube Fix & Customization by Arch v1.8.4 ! (1/11) YouTube 4 Videos Per Row Fix (Home and Channel Pages) / YouTube Fix & Customization\n\nyoutube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display:contents !important;)\n\nyoutube.com##ytd-rich-grid-renderer, html:style(--ytd-rich-grid-items-per-row: 5 !important;)\n\nyoutube.com##ytd-rich-grid-renderer, html:style(--ytd-rich-grid-posts-per-row: 5 !important;)\n\n! Apr 27, 2025 https://simptown.su\n||simptown.su/assets/img/juice/juice1_cry.jpg$image"
+}
