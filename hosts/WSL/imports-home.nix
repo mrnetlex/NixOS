@@ -13,5 +13,6 @@
     ./../../modules/home/ssh.nix
     ./../../modules/home/television.nix
     ./../../modules/home/fastfetch.nix
+    ./../../modules/home/cava.nix
   ];
 }

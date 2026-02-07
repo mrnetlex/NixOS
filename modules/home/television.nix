@@ -11,7 +11,7 @@
   		  esc = "quit";
   		};
   		shell_integration.keybindings = {
-  			smart_autocomplete = "ctrl-f";
+  			smart_autocomplete = "ctrl-t";
   		};
   	};
   };
