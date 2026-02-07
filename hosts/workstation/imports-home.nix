@@ -2,6 +2,7 @@
 
 {
   imports = [
+  	./../../modules/home/sops.nix
     ./../../modules/home/kitty.nix
     ./../../modules/home/mpv.nix
     ./../../modules/home/firefox.nix

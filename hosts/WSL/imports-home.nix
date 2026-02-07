@@ -2,6 +2,7 @@
 
 {
   imports = [
+  	./../../modules/home/sops.nix
     ./../../modules/home/bat.nix
     ./../../modules/home/micro.nix
     ./../../modules/home/btop.nix

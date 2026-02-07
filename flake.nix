@@ -16,7 +16,12 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.netlex = import ./hosts/workstation/home.nix;
+              home-manager.users.netlex = {
+              	imports = [
+              		./hosts/workstation/home.nix
+              		inputs.sops-nix.homeManagerModules.sops
+              	];
+              };
               home-manager.extraSpecialArgs = { inherit (import ./hosts/workstation/settings.nix) systemSettings; };
             }
           ];
@@ -35,12 +40,17 @@
             inputs.nix-index-database.nixosModules.default
             { programs.nix-index-database.comma.enable = true; }
             inputs.stylix.nixosModules.stylix
-            inputs.sops-nix.nixosModules.sops
+            inputs.sops-nix.nixosModules.sops	
             home-manager.nixosModules.home-manager
             {
         	  home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.netlex = import ./hosts/WSL/home.nix;
+              home-manager.users.netlex = {
+              	imports = [
+              		./hosts/WSL/home.nix
+              		inputs.sops-nix.homeManagerModules.sops
+              	];
+              };
               home-manager.extraSpecialArgs = { inherit (import ./hosts/WSL/settings.nix) systemSettings; };
             }
           ];
