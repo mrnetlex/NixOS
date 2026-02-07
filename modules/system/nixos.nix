@@ -33,8 +33,8 @@
   # Packages
   environment.systemPackages = with pkgs; [
     nvd
-    deadnix #remove dead nix code
     alejandra
+    nixfmt
     nix-tree
     #nix-du
     graphviz #needed for nix-du nice graphs
