@@ -5,7 +5,7 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ config, lib, pkgs, systemSettings, ... }:
+{ config, lib, pkgs, inputs, systemSettings, ... }:
 
 {
   imports = [
@@ -13,6 +13,9 @@
     ./hardware-configuration.nix
   ];
 
+  nixpkgs.overlays = [
+    (import ../../overlays/unstable-packages.nix { inherit inputs; })
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

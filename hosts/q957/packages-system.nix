@@ -44,6 +44,8 @@
     duf
     progress
     fastfetch
+    #unstable packages from overlay
+    fresh-editor
      ];
   # SERVICES for my  programs
   #plocate
