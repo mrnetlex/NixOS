@@ -1,7 +1,7 @@
 {
   description = "Netlex's flake";
 
-  outputs = inputs @ { self, nixpkgs, home-manager, stylix, ...}: 
+  outputs = inputs @ { self, nixpkgs, nixpkgs-stable, home-manager, home-manager-stable, stylix, ...}: 
     {
       nixosConfigurations = {
         workstation = nixpkgs.lib.nixosSystem {
@@ -28,6 +28,32 @@
           specialArgs = { 
             inherit inputs;
             inherit (import ./hosts/workstation/settings.nix) systemSettings; 
+          };
+        };
+
+        q957 = nixpkgs-stable.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/q957/configuration.nix
+            inputs.nix-index-database.nixosModules.default
+            inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
+            inputs.home-manager-stable.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.netlex = {
+              	imports = [
+              		./hosts/q957/home.nix
+              		inputs.sops-nix.homeManagerModules.sops
+              	];
+              };
+              home-manager.extraSpecialArgs = { inherit (import ./hosts/q957/settings.nix) systemSettings; };
+            }
+          ];
+          specialArgs = { 
+            inherit inputs;
+            inherit (import ./hosts/q957/settings.nix) systemSettings; 
           };
         };
 
@@ -90,11 +116,16 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+
     NixOS-WSL.url = "github:nix-community/NixOS-WSL";
     NixOS-WSL.inputs.nixpkgs.follows = "nixpkgs";
     
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager-stable.url = "github:nix-community/home-manager/release-25.11";
+    home-manager-stable.inputs.nixpkgs.follows = "nixpkgs-stable";
 
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";

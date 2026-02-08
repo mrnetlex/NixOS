@@ -7,5 +7,5 @@
   	docker-compose
   	lazydocker
   ];
-  # users.users.${systemSettings.username}.extraGroups = [ "docker" ];
+  users.users.${systemSettings.username}.extraGroups = [ "docker" ];
 }
