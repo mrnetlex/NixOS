@@ -1,10 +1,10 @@
 {
   description = "Netlex's flake";
 
-  outputs = inputs @ { self, nixpkgs, nixpkgs-stable, home-manager, home-manager-stable, stylix, ...}: 
+  outputs = inputs @ { self, nixpkgs-unstable, nixpkgs-stable, home-manager, home-manager-stable, stylix, ...}: 
     {
       nixosConfigurations = {
-        workstation = nixpkgs.lib.nixosSystem {
+        workstation = nixpkgs-unstable.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./hosts/workstation/configuration.nix
@@ -57,10 +57,10 @@
           };
         };
 
-        WSL-nix = nixpkgs.lib.nixosSystem {
+        WSL-nix = nixpkgs-unstable.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            { nix.registry.nixpkgs.flake = nixpkgs; }
+            { nix.registry.nixpkgs.flake = nixpkgs-unstable; }
             ./hosts/WSL/configuration.nix
             inputs.NixOS-WSL.nixosModules.wsl
             inputs.nix-index-database.nixosModules.default
@@ -88,7 +88,7 @@
       };
 		homeConfigurations = {
 		  "netlex@q957" = home-manager.lib.homeManagerConfiguration {
-		    pkgs = nixpkgs.legacyPackages."x86_64-linux";
+		    pkgs = nixpkgs-unstable.legacyPackages."x86_64-linux";
 		    extraSpecialArgs = { 
 		      inherit inputs; 
 		      inherit (import ./hosts/ubuntu-server/settings-x86.nix) systemSettings; 
@@ -100,7 +100,7 @@
 		  };
 		
 		  "netlex@oracle-flex" = home-manager.lib.homeManagerConfiguration {
-		    pkgs = nixpkgs.legacyPackages."aarch64-linux";
+		    pkgs = nixpkgs-unstable.legacyPackages."aarch64-linux";
 		    extraSpecialArgs = { 
 		      inherit inputs; 
 		      inherit (import ./hosts/ubuntu-server/settings-arm.nix) systemSettings; 
@@ -114,29 +114,29 @@
     };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
 
     NixOS-WSL.url = "github:nix-community/NixOS-WSL";
-    NixOS-WSL.inputs.nixpkgs.follows = "nixpkgs";
+    NixOS-WSL.inputs.nixpkgs.follows = "nixpkgs-unstable";
     
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     home-manager-stable.url = "github:nix-community/home-manager/release-25.11";
     home-manager-stable.inputs.nixpkgs.follows = "nixpkgs-stable";
 
     sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     nix-index-database.url = "github:nix-community/nix-index-database";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     stylix.url = "github:nix-community/stylix";
-    stylix.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
