@@ -45,7 +45,7 @@
     progress
     fastfetch
     #unstable packages from overlay
-    fresh-editor
+    unstable.fresh-editor
      ];
   # SERVICES for my  programs
   #plocate

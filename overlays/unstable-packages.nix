@@ -7,6 +7,11 @@ let
   };
 in
 {
-  fresh-editor = unstable.fresh-editor;
   unstable = unstable;
+  # With this above you can just reference pkgs.unstable.foo in your normal config
+  # But you can also put some pkgs like this:
+  #
+  # foo = unstable.foo;
+  #
+  # and then put pkgs.foo in config
 }
