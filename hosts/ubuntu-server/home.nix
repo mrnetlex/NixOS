@@ -3,7 +3,7 @@
   # Basics
   home.username = "${systemSettings.username}";
   home.homeDirectory = "/home/${systemSettings.username}";
-  home.stateVersion = "25.11"; # Match your current install
+  home.stateVersion = "25.11"; # Match your current install - i think it is equivalent of system.stateVersion, so if I install it on new host maybe i should change that
   
   programs.home-manager.enable = true;
 
