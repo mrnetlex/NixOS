@@ -15,4 +15,5 @@
       key_path = config.sops.secrets.atuin-key.path;
     };
   };
+  home.file = { "/home/netlex/.atuin/bin/env.fish" = { text = ''''; executable = false; };}; #for some reason atuin complains if this file doesn't exist so i created it manually
 }
