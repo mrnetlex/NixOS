@@ -3,6 +3,7 @@
 {
   programs.atuin = {
     enable = true;
+    enableFishIntegration= true;
     settings = {
       auto_sync = true;
       sync_frequency = "5m";
@@ -12,7 +13,6 @@
       enter_accept = true;
       session_path = config.sops.secrets.atuin-session.path;
       key_path = config.sops.secrets.atuin-key.path;
-    enableFishIntegration= true;
     };
   };
 }
